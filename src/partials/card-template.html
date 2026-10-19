@@ -1,0 +1,31 @@
+<!-- Ficha de inmueble: plantilla única. habitat.js la rellena con cada inmueble (renderCard). -->
+<template id="tpl-property-card">
+  <article class="property-card" data-component="property-card">
+    <div class="property-card__media">
+      <div class="property-card__slides" data-slides aria-roledescription="carrusel"></div>
+      <div class="property-card__badges" data-badges></div>
+      <div class="property-card__actions">
+        <button class="icon-toggle" type="button" aria-pressed="false" data-action="favorite" aria-label="Guardar en favoritos">
+          <svg class="icon icon--heart" aria-hidden="true"><use href="#i-heart"/></svg>
+        </button>
+        <button class="icon-toggle" type="button" aria-pressed="false" data-action="discard" aria-label="Descartar">
+          <svg class="icon" aria-hidden="true"><use href="#i-eye-off"/></svg>
+        </button>
+      </div>
+      <div class="property-card__nav">
+        <button type="button" data-action="prev-photo" aria-label="Foto anterior"><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+        <span class="property-card__count" data-count></span>
+        <button type="button" data-action="next-photo" aria-label="Foto siguiente"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+      </div>
+    </div>
+    <div class="property-card__body">
+      <div class="price" data-price></div>
+      <h3 class="property-card__title"><a data-link></a></h3>
+      <ul class="property-card__meta" data-meta></ul>
+      <div class="property-card__foot">
+        <span class="property-card__ref" data-ref></span>
+        <a class="link-arrow property-card__more" data-more>+ Info</a>
+      </div>
+    </div>
+  </article>
+</template>

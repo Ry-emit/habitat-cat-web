@@ -1,0 +1,36 @@
+<!--meta {"title": "Mis inmuebles: favoritos, vistos y descartados · HABITAT.CAT", "description": "Los inmuebles que has guardado, los que has visto y los que has descartado en HABITAT.CAT, guardados en este navegador.", "route": "/my-properties", "nav": "mis-inmuebles"} -->
+<!-- @include head -->
+<body data-page="mis-inmuebles" data-pages="{{pages}}">
+<!-- @include icons -->
+<!-- @include header -->
+
+<main id="contenido">
+  <section class="page-head">
+    <div class="container stack">
+      <nav aria-label="Migas"><ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Mis inmuebles</li></ol></nav>
+      <h1 class="h1">Mis inmuebles</h1>
+      <p class="lead">Se guardan en este navegador, sin registrarte.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="padding-top:0">
+    <div class="container" data-personal-list data-component="personal-lists">
+      <nav class="tabs" aria-label="Listas">
+        <a href="?lista=favorites" data-list-tab="favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Favoritos <span class="shortcuts__n" data-count="favorites">0</span></a>
+        <a href="?lista=viewed" data-list-tab="viewed"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>Vistos <span class="shortcuts__n" data-count="viewed">0</span></a>
+        <a href="?lista=discarded" data-list-tab="discarded"><svg class="icon" aria-hidden="true"><use href="#i-eye-off"/></svg>Descartados <span class="shortcuts__n" data-count="discarded">0</span></a>
+      </nav>
+      <div class="property-grid" data-grid></div>
+      <div class="empty-state" data-empty hidden>
+        <svg class="icon" aria-hidden="true" style="width:40px;height:40px"><use href="#i-heart"/></svg>
+        <p class="h4">Aún no hay inmuebles en esta lista.</p>
+        <p class="muted small">Pulsa el corazón de cualquier ficha para guardarla aquí.</p>
+        <a class="btn btn--primary" href="venta.html">Ver inmuebles</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @include footer -->
+<!-- @include floating -->
+<!-- @include scripts -->

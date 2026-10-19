@@ -1,0 +1,84 @@
+<footer class="site-footer on-dark" data-component="site-footer">
+  <div class="container">
+    <section class="site-footer__contact" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="site-footer__contact-copy">
+        <span class="eyebrow">Contacto</span>
+        <h2 class="h2" id="contacto-titulo">Hablemos de tu próxima casa.</h2>
+        <ul class="contact-list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+34938147330">938 147 330</a><small>Oficina</small></span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span><a href="tel:+34678653335">678 653 335</a><small>Móvil y WhatsApp</small></span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span><a href="mailto:vilanova@habitatcat.com">vilanova@habitatcat.com</a><small>Correo</small></span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>Plaça Soler i Carbonell, 28<br>08800 Vilanova i la Geltrú (Barcelona)<small>Oficina</small></span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><span><a href="https://www.habitatcat.com">www.habitatcat.com</a><small>Web</small></span></li>
+        </ul>
+        <div class="media media--map media--dark ratio-16x9" data-label="Mapa de la oficina · Plaça Soler i Carbonell, 28" data-slot="office-map"></div>
+      </div>
+
+      <div class="site-footer__form-panel">
+        <form class="form" data-component="contact-form" data-form="contacto" novalidate>
+          <h3 class="h3">Escríbenos</h3>
+          <div class="form__row form__row--2">
+            <div class="field"><label class="field__label" for="f-name">Nombre <span class="req">*</span></label><input class="input" id="f-name" name="nombre" autocomplete="name" required></div>
+            <div class="field"><label class="field__label" for="f-phone">Teléfono</label><input class="input" id="f-phone" name="telefono" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field"><label class="field__label" for="f-email">Email <span class="req">*</span></label><input class="input" id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label class="field__label" for="f-msg">Mensaje <span class="req">*</span></label><textarea class="textarea" id="f-msg" name="mensaje" required placeholder="Cuéntanos qué buscas o qué quieres vender."></textarea></div>
+          <!-- @include consent-contacto -->
+          <div class="form__actions">
+            <button class="btn btn--light btn--lg" type="submit">Enviar<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <div class="site-footer__links">
+      <div class="site-footer__about">
+        <a class="logo" href="{{pages}}index.html"><span class="logo__name">habitat.cat</span><span class="logo__tag">consultors immobiliaris</span></a>
+        <p>Inmobiliaria en Vilanova i la Geltrú. Compra, venta, alquiler, obra nueva y traspasos en el Garraf, el Penedès y toda la provincia de Barcelona, con financiación hasta el 100 %.</p>
+        <ul class="social" aria-label="Redes sociales">
+          <li><a href="https://www.facebook.com/habitatcat.cat/" rel="noopener" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a href="https://www.instagram.com/habitat.cat" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a href="/rss" aria-label="RSS"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg></a></li>
+        </ul>
+      </div>
+      <nav aria-labelledby="pie-inmuebles">
+        <h2 id="pie-inmuebles">Inmuebles</h2>
+        <ul>
+          <li><a href="{{pages}}venta.html">Venta</a></li>
+          <li><a href="{{pages}}alquiler.html">Alquiler</a></li>
+          <li><a href="{{pages}}promociones.html">Obra nueva</a></li>
+          <li><a href="{{pages}}mis-inmuebles.html">Mis favoritos</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="pie-servicios">
+        <h2 id="pie-servicios">Servicios</h2>
+        <ul>
+          <li><a href="{{pages}}index.html#valoracion">Valoración gratuita</a></li>
+          <li><a href="{{pages}}alertas.html">Alertas</a></li>
+          <li><a href="{{pages}}publica-tu-inmueble.html">Publica tu inmueble</a></li>
+          <li><a href="{{pages}}inmueble.html#hipoteca">Simulador de hipoteca</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="pie-empresa">
+        <h2 id="pie-empresa">HABITAT.CAT</h2>
+        <ul>
+          <li><a href="{{pages}}index.html">Inicio</a></li>
+          <li><a href="{{pages}}empresa.html">Empresa</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="site-footer__legal">
+      <p>© <span data-year>2026</span> Familia Diez Inmuebles SLU · CIF B66066481 · Reg. Mercantil de Barcelona, folio 31, tomo 43818, hoja B43916D</p>
+      <ul>
+        <li><a href="{{pages}}privacidad.html">Política de privacidad</a></li>
+        <li><a href="{{pages}}aviso-legal.html">Aviso legal</a></li>
+        <li><a href="{{pages}}cookies.html">Política de cookies</a></li>
+        <li><button class="btn btn--sm btn--outline-light" type="button" data-action="open-cookies">Configurar cookies</button></li>
+      </ul>
+    </div>
+  </div>
+  <p class="site-footer__wordmark" aria-hidden="true">habitat</p>
+</footer>

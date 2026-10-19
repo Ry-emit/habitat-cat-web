@@ -1,0 +1,54 @@
+<!--meta {"title": "Alertas de inmuebles: te avisamos cuando entre el tuyo · HABITAT.CAT", "description": "Crea una alerta con el tipo de inmueble, la zona y el precio que buscas, y te enviamos por correo cada inmueble nuevo que encaje.", "route": "/alerts", "nav": "alertas"} -->
+<!-- @include head -->
+<body data-page="alertas" data-pages="{{pages}}">
+<!-- @include icons -->
+<!-- @include header -->
+
+<main id="contenido">
+  <section class="section">
+    <div class="container split" style="align-items:start">
+      <div class="split__copy">
+        <nav aria-label="Migas"><ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Alertas</li></ol></nav>
+        <span class="eyebrow">Nueva alerta</span>
+        <h1 class="h1">Te avisamos cuando entre tu casa.</h1>
+        <p class="lead">Dinos qué buscas y recibirás por correo cada inmueble nuevo que encaje.</p>
+
+        <form class="form" data-form="alerta" data-component="alert-form" novalidate style="width:100%">
+          <fieldset class="field">
+            <legend class="field__label">Operación</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="op" value="sale" checked><span>Comprar</span></label>
+              <label class="chip"><input type="radio" name="op" value="rent"><span>Alquilar</span></label>
+              <label class="chip"><input type="radio" name="op" value="transfer"><span>Traspaso</span></label>
+            </div>
+          </fieldset>
+          <div class="form__row form__row--2">
+            <div class="field"><label class="field__label" for="a-type">Tipo de inmueble</label><select class="select" id="a-type" name="tipo" data-fill="types"><option value="">Todos los tipos</option></select></div>
+            <div class="field"><label class="field__label" for="a-area">Zona</label><input class="input" id="a-area" name="zona" list="areas-list" placeholder="Municipio o zona"></div>
+          </div>
+          <div class="form__row form__row--3">
+            <div class="field"><label class="field__label" for="a-min">Precio desde</label><div class="input-group"><input class="input" id="a-min" name="desde" type="number" min="0" step="1000"><span class="input-group__suffix">€</span></div></div>
+            <div class="field"><label class="field__label" for="a-max">Precio hasta</label><div class="input-group"><input class="input" id="a-max" name="hasta" type="number" min="0" step="1000"><span class="input-group__suffix">€</span></div></div>
+            <div class="field"><label class="field__label" for="a-bed">Habitaciones</label><select class="select" id="a-bed" name="hab"><option value="">Indiferente</option><option value="1">1 o más</option><option value="2">2 o más</option><option value="3">3 o más</option><option value="4">4 o más</option></select></div>
+          </div>
+          <h2 class="h4" style="margin-top:8px">Tus datos</h2>
+          <div class="form__row form__row--3">
+            <div class="field"><label class="field__label" for="a-name">Nombre <span class="req">*</span></label><input class="input" id="a-name" name="nombre" autocomplete="name" required></div>
+            <div class="field"><label class="field__label" for="a-email">Email <span class="req">*</span></label><input class="input" id="a-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label class="field__label" for="a-phone">Teléfono <span class="req">*</span></label><input class="input" id="a-phone" name="telefono" type="tel" autocomplete="tel" required></div>
+          </div>
+          <!-- @include consent-alertas -->
+          <div class="form__actions">
+            <button class="btn btn--primary btn--lg" type="submit"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg>Crear alerta</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+      <div class="media ratio-4x5" data-label="Foto · llaves en mano / entrada de una casa" data-slot="alerts"></div>
+    </div>
+  </section>
+</main>
+
+<!-- @include footer -->
+<!-- @include floating -->
+<!-- @include scripts -->

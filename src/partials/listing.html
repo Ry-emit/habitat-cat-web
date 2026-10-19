@@ -1,0 +1,39 @@
+<!-- Interior del listado. Va dentro de <div data-listing data-operation="sale|rent" data-new-build data-size="12">. -->
+<div class="listing-toolbar">
+  <p class="listing-toolbar__count" data-result-count aria-live="polite">Cargando inmuebles…</p>
+  <div class="listing-toolbar__tools">
+    <ul class="shortcuts" aria-label="Mis listas">
+      <li><a href="{{pages}}mis-inmuebles.html?lista=viewed"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>Vistos <span class="shortcuts__n" data-count="viewed">0</span></a></li>
+      <li><a href="{{pages}}mis-inmuebles.html?lista=discarded"><svg class="icon" aria-hidden="true"><use href="#i-eye-off"/></svg>Descartados <span class="shortcuts__n" data-count="discarded">0</span></a></li>
+      <li><a href="{{pages}}mis-inmuebles.html?lista=favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Favoritos <span class="shortcuts__n" data-count="favorites">0</span></a></li>
+    </ul>
+    <label class="listing-toolbar__sort"><span class="muted">Ordenar</span><select class="select select--on-paper" data-sort aria-label="Ordenar inmuebles"></select></label>
+    <button class="btn btn--outline btn--sm" type="button" aria-pressed="false" data-action="toggle-map"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg>Mapa</button>
+  </div>
+</div>
+
+<div class="map-block" data-map-view hidden>
+  <div class="media media--map ratio-21x9" data-label="Mapa con los inmuebles de esta búsqueda" data-slot="listing-map" style="margin-bottom:32px"></div>
+</div>
+
+<div class="property-grid" data-grid></div>
+
+<div class="empty-state" data-empty hidden>
+  <svg class="icon" aria-hidden="true" style="width:40px;height:40px"><use href="#i-search"/></svg>
+  <p class="h4">No hay inmuebles con estos filtros.</p>
+  <p class="muted small">Prueba con otra zona o con un precio más amplio, o crea una alerta y te avisamos cuando entre uno.</p>
+  <a class="btn btn--primary" href="{{pages}}alertas.html"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg>Crear alerta</a>
+</div>
+
+<div class="listing-foot">
+  <div class="page-size">
+    <span>Por página</span>
+    <div class="segmented" data-page-size role="radiogroup" aria-label="Inmuebles por página">
+      <label><input type="radio" name="res" value="12"><span>12</span></label>
+      <label><input type="radio" name="res" value="24"><span>24</span></label>
+      <label><input type="radio" name="res" value="36"><span>36</span></label>
+      <label><input type="radio" name="res" value="48"><span>48</span></label>
+    </div>
+  </div>
+  <nav aria-label="Paginación"><ul class="pagination" data-pagination></ul></nav>
+</div>

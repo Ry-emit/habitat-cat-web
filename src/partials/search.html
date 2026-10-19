@@ -1,0 +1,98 @@
+<form class="search" action="{{pages}}venta.html" method="get" role="search" aria-label="Buscar inmuebles" data-component="search-form">
+  <div class="search__head">
+    <fieldset>
+      <legend class="visually-hidden">Operación</legend>
+      <div class="segmented">
+        <label><input type="radio" name="op" value="sale" checked><span>Comprar</span></label>
+        <label><input type="radio" name="op" value="rent"><span>Alquilar</span></label>
+        <label><input type="radio" name="op" value="optionToBuy"><span>Opción a compra</span></label>
+        <label><input type="radio" name="op" value="shortTerm"><span>Temporal</span></label>
+        <label><input type="radio" name="op" value="transfer"><span>Traspaso</span></label>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="search__fields">
+    <div class="field">
+      <label class="field__label" for="s-type{{searchId}}">Tipo de inmueble</label>
+      <select class="select" id="s-type{{searchId}}" name="tipo" data-fill="types">
+        <option value="">Todos los tipos</option>
+      </select>
+    </div>
+    <div class="field">
+      <label class="field__label" for="s-area{{searchId}}">Zona</label>
+      <input class="input" id="s-area{{searchId}}" name="zona" type="text" list="areas-list" autocomplete="off" placeholder="Municipio o zona: Vilanova, Sitges…">
+    </div>
+    <div class="field">
+      <label class="field__label" for="s-min{{searchId}}">Precio desde</label>
+      <div class="input-group">
+        <input class="input" id="s-min{{searchId}}" name="desde" type="number" inputmode="numeric" min="0" step="1000" placeholder="Mín.">
+        <span class="input-group__suffix">€</span>
+      </div>
+    </div>
+    <div class="field">
+      <label class="field__label" for="s-max{{searchId}}">Precio hasta</label>
+      <div class="input-group">
+        <input class="input" id="s-max{{searchId}}" name="hasta" type="number" inputmode="numeric" min="0" step="1000" placeholder="Máx.">
+        <span class="input-group__suffix">€</span>
+      </div>
+    </div>
+    <div class="field">
+      <label class="field__label" for="s-ref{{searchId}}">Referencia</label>
+      <input class="input" id="s-ref{{searchId}}" name="ref" type="text" placeholder="03-60395">
+    </div>
+    <div class="search__submit">
+      <button class="btn btn--primary" type="submit">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>Buscar
+      </button>
+    </div>
+  </div>
+
+  <div class="search__foot">
+    <label class="check"><input type="checkbox" name="mapa" value="1"><span>Ver en el mapa</span></label>
+    <details class="search__advanced">
+      <summary>
+        <svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg>Búsqueda avanzada
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+      </summary>
+      <div class="search__advanced-body">
+        <fieldset class="field">
+          <legend class="field__label">Superficie (m²)</legend>
+          <div class="range">
+            <input class="input" name="m2min" type="number" min="0" placeholder="Mín." aria-label="Superficie mínima">
+            <input class="input" name="m2max" type="number" min="0" placeholder="Máx." aria-label="Superficie máxima">
+          </div>
+        </fieldset>
+        <div class="field">
+          <label class="field__label" for="s-bed{{searchId}}">Habitaciones</label>
+          <select class="select" id="s-bed{{searchId}}" name="hab">
+            <option value="">Indiferente</option><option value="1">1 o más</option><option value="2">2 o más</option><option value="3">3 o más</option><option value="4">4 o más</option><option value="5">5 o más</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field__label" for="s-bath{{searchId}}">Baños</label>
+          <select class="select" id="s-bath{{searchId}}" name="ban">
+            <option value="">Indiferente</option><option value="1">1 o más</option><option value="2">2 o más</option><option value="3">3 o más</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field__label" for="s-order{{searchId}}">Ordenar por</label>
+          <select class="select" id="s-order{{searchId}}" name="orden" data-fill="sort"></select>
+        </div>
+        <fieldset class="search__extras">
+          <legend class="field__label">Extras</legend>
+          <div class="chips" style="margin-top:8px">
+            <label class="chip"><input type="checkbox" name="extra" value="pool"><span>Piscina</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="parking"><span>Parking</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="lift"><span>Ascensor</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="terrace"><span>Terraza</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="furnished"><span>Amueblado</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="urbanization"><span>Urbanización</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="newBuild"><span>Obra nueva</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="seaView"><span>Vistas al mar</span></label>
+          </div>
+        </fieldset>
+      </div>
+    </details>
+  </div>
+</form>

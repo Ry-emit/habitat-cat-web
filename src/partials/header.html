@@ -1,0 +1,78 @@
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header {{headerClass}}" data-component="site-header">
+  <div class="site-header__top">
+    <div class="container">
+      <nav aria-label="Idioma">
+        <!-- La web actual tiene 13 idiomas: añade aquí un <li> por idioma. -->
+        <ul class="lang-switch">
+          <li><a href="#" hreflang="ca" lang="ca" title="Català"><span>CA</span></a></li>
+          <li><a href="#" hreflang="es" lang="es" title="Castellano" aria-current="true"><span>ES</span></a></li>
+          <li><a href="#" hreflang="en" lang="en" title="English"><span>EN</span></a></li>
+        </ul>
+      </nav>
+      <ul class="site-header__top-links">
+        <li><a href="{{pages}}publica-tu-inmueble.html" data-nav="publica">Publica tu inmueble</a></li>
+        <li><a href="{{pages}}mis-inmuebles.html" data-nav="mis-inmuebles">Mis favoritos <span data-count="favorites"></span></a></li>
+        <li><a href="mailto:vilanova@habitatcat.com">vilanova@habitatcat.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-header__bar">
+    <div class="container">
+      <a class="logo site-header__logo" href="{{pages}}index.html" aria-label="HABITAT.CAT, ir a la portada">
+        <!-- Sustituir por el logo: <img src="…/logo.svg" alt="HABITAT.CAT consultors immobiliaris"> -->
+        <span class="logo__name">habitat.cat</span>
+        <span class="logo__tag">consultors immobiliaris</span>
+      </a>
+      <nav class="site-header__nav" aria-label="Principal">
+        <ul>
+          <li><a href="{{pages}}index.html" data-nav="inicio">Inicio</a></li>
+          <li><a href="{{pages}}venta.html" data-nav="venta">Venta</a></li>
+          <li><a href="{{pages}}alquiler.html" data-nav="alquiler">Alquiler</a></li>
+          <li><a href="{{pages}}promociones.html" data-nav="promociones">Obra nueva</a></li>
+          <li><a href="{{pages}}empresa.html" data-nav="empresa">Empresa</a></li>
+          <li><a href="{{pages}}alertas.html" data-nav="alertas">Alertas</a></li>
+          <li><a href="#contacto" data-nav="contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__phone" href="tel:+34938147330">
+        <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>938 147 330
+      </a>
+      <a class="btn btn--soft btn--icon site-header__phone-sm" href="tel:+34938147330" aria-label="Llamar al 938 147 330">
+        <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+      </a>
+      <button class="btn btn--soft btn--icon site-header__toggle" type="button" aria-expanded="false" aria-controls="menu-movil" data-action="open-menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menú</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav on-dark" id="menu-movil" hidden data-component="mobile-nav">
+  <div class="mobile-nav__head">
+    <a class="logo" href="{{pages}}index.html"><span class="logo__name">habitat.cat</span><span class="logo__tag">consultors immobiliaris</span></a>
+    <button class="btn btn--outline-light btn--icon" type="button" data-action="close-menu" aria-label="Cerrar menú">
+      <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Principal (móvil)">
+    <ul>
+      <li><a class="mobile-nav__link" href="{{pages}}index.html" data-nav="inicio">Inicio</a></li>
+      <li><a class="mobile-nav__link" href="{{pages}}venta.html" data-nav="venta">Venta</a></li>
+      <li><a class="mobile-nav__link" href="{{pages}}alquiler.html" data-nav="alquiler">Alquiler</a></li>
+      <li><a class="mobile-nav__link" href="{{pages}}promociones.html" data-nav="promociones">Obra nueva</a></li>
+      <li><a class="mobile-nav__link" href="{{pages}}empresa.html" data-nav="empresa">Empresa</a></li>
+      <li><a class="mobile-nav__link" href="{{pages}}alertas.html" data-nav="alertas">Alertas</a></li>
+      <li><a class="mobile-nav__link" href="{{pages}}publica-tu-inmueble.html" data-nav="publica">Publica tu inmueble</a></li>
+      <li><a class="mobile-nav__link" href="#contacto" data-action="close-menu">Contacto</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-nav__foot">
+    <a class="btn btn--light btn--lg" href="tel:+34938147330"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>938 147 330</a>
+    <ul class="lang-switch">
+      <li><a href="#" hreflang="ca" lang="ca"><span>CA</span></a></li>
+      <li><a href="#" hreflang="es" lang="es" aria-current="true"><span>ES</span></a></li>
+      <li><a href="#" hreflang="en" lang="en"><span>EN</span></a></li>
+    </ul>
+  </div>
+</div>

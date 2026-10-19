@@ -1,0 +1,68 @@
+<!--meta {"title": "Vende o alquila tu inmueble con nosotros · HABITAT.CAT", "description": "Publica tu piso, casa, local o terreno con HABITAT.CAT: lo valoramos gratis y lo ofrecemos a nuestros clientes en Vilanova i la Geltrú y el Garraf.", "route": "/list-your-property", "nav": "publica"} -->
+<!-- @include head -->
+<body data-page="publica" data-pages="{{pages}}">
+<!-- @include icons -->
+<!-- @include header -->
+
+<main id="contenido">
+  <section class="section">
+    <div class="container split split--reverse" style="align-items:start">
+      <div class="split__copy">
+        <nav aria-label="Migas"><ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Publica tu inmueble</li></ol></nav>
+        <span class="eyebrow">Para propietarios</span>
+        <h1 class="h1">Vende o alquila tu inmueble con nosotros.</h1>
+        <p class="lead">Cuéntanos cómo es. Lo valoramos y, si nos lo encargas, lo ofrecemos a nuestros clientes y en los principales portales.</p>
+
+        <form class="form" data-form="publica" data-component="list-property-form" novalidate style="width:100%">
+          <h2 class="h4">Tus datos</h2>
+          <div class="form__row form__row--3">
+            <div class="field"><label class="field__label" for="p-name">Nombre <span class="req">*</span></label><input class="input" id="p-name" name="nombre" autocomplete="name" required></div>
+            <div class="field"><label class="field__label" for="p-email">Email <span class="req">*</span></label><input class="input" id="p-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label class="field__label" for="p-phone">Teléfono <span class="req">*</span></label><input class="input" id="p-phone" name="telefono" type="tel" autocomplete="tel" required></div>
+          </div>
+
+          <h2 class="h4" style="margin-top:8px">El inmueble</h2>
+          <fieldset class="field">
+            <legend class="field__label">Quiero</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="op" value="sale" checked><span>Vender</span></label>
+              <label class="chip"><input type="radio" name="op" value="rent"><span>Alquilar</span></label>
+              <label class="chip"><input type="radio" name="op" value="transfer"><span>Traspasar</span></label>
+            </div>
+          </fieldset>
+          <div class="form__row form__row--2">
+            <div class="field"><label class="field__label" for="p-type">Tipo de inmueble <span class="req">*</span></label><select class="select" id="p-type" name="tipo" data-fill="types" required><option value="">Elige uno</option></select></div>
+            <div class="field"><label class="field__label" for="p-area">Municipio y zona <span class="req">*</span></label><input class="input" id="p-area" name="zona" list="areas-list" required></div>
+          </div>
+          <div class="form__row form__row--3">
+            <div class="field"><label class="field__label" for="p-m2">Superficie</label><div class="input-group"><input class="input" id="p-m2" name="m2" type="number" min="0"><span class="input-group__suffix">m²</span></div></div>
+            <div class="field"><label class="field__label" for="p-bed">Habitaciones</label><input class="input" id="p-bed" name="hab" type="number" min="0"></div>
+            <div class="field"><label class="field__label" for="p-bath">Baños</label><input class="input" id="p-bath" name="ban" type="number" min="0"></div>
+          </div>
+          <div class="field"><label class="field__label" for="p-desc">Descripción</label><textarea class="textarea" id="p-desc" name="descripcion" placeholder="Estado, reformas, orientación, extras, precio que esperas…"></textarea></div>
+          <div class="field">
+            <label class="field__label" for="p-photos">Fotos (opcional)</label>
+            <input class="input" id="p-photos" name="fotos" type="file" accept="image/*" multiple>
+            <span class="field__hint">Hasta 10 fotos. También puedes enviarlas después por WhatsApp.</span>
+          </div>
+          <!-- @include consent-publica -->
+          <div class="form__actions">
+            <button class="btn btn--primary btn--lg" type="submit">Enviar mi inmueble<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+      <div class="stack" style="--stack:16px">
+        <div class="media ratio-4x5" data-label="Foto · fachada de una casa del Garraf" data-slot="list-property"></div>
+        <div class="grid grid--2" style="--grid-gap:16px">
+          <div class="stat-tile" style="min-height:160px"><p class="stat-tile__value">Gratis</p><p class="stat-tile__text">La valoración de tu inmueble.</p></div>
+          <div class="stat-tile" style="min-height:160px"><p class="stat-tile__value">100 %</p><p class="stat-tile__text">Financiación para quien compra.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @include footer -->
+<!-- @include floating -->
+<!-- @include scripts -->

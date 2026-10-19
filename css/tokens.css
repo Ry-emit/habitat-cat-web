@@ -1,0 +1,144 @@
+/* =========================================================
+   HABITAT.CAT — tokens de diseño
+   Estilo sacado de tres referencias (Vista, NORD, «Real Estate»):
+   monocromo, la foto manda, titulares grandes en sans geométrica,
+   botones píldora, esquinas redondeadas y fichas gris claro.
+   Cambia aquí y cambia todo el kit.
+   ========================================================= */
+
+@font-face {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("../fonts/urbanist-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("../fonts/urbanist-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("../fonts/inter-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  /* ---- Color: monocromo ---- */
+  --color-ink: #0f0f0e;          /* texto, botón principal, pie */
+  --color-ink-soft: #2a2a28;     /* hover del botón principal */
+  --color-paper: #ffffff;        /* fondo de página */
+  --color-mist: #f2f2f0;         /* fichas de cifras, campos, bloques */
+  --color-mist-strong: #e8e8e5;  /* hover de fichas, huecos de foto */
+  --color-line: #e2e2df;         /* bordes y separadores */
+  --color-muted: #6b6b68;        /* texto secundario */
+  --color-faint: #9a9a96;        /* placeholders, ayudas */
+  --color-on-dark: #ffffff;      /* texto sobre foto o fondo oscuro */
+  --color-on-dark-muted: rgba(255, 255, 255, .72);
+  --color-scrim: linear-gradient(180deg, rgba(15,15,14,.55) 0%, rgba(15,15,14,.15) 40%, rgba(15,15,14,.65) 100%);
+
+  /* Acento: por defecto, tinta. Para recuperar el rojo del tejado del logo
+     actual, cambia solo esta línea (p. ej. #c8102e). */
+  --color-accent: var(--color-ink);
+  --color-on-accent: #ffffff;
+
+  /* Estados (funcionales, no decorativos) */
+  --color-focus: #0f0f0e;
+  --color-error: #b42318;
+  --color-success: #1f7a4d;
+
+  /* Escala del certificado energético (colores oficiales UE, aproximados) */
+  --energy-a: #00843d;
+  --energy-b: #4cb848;
+  --energy-c: #bfd730;
+  --energy-d: #fff200;
+  --energy-e: #fdb913;
+  --energy-f: #f37021;
+  --energy-g: #ed1c24;
+
+  /* Huecos de foto (sin imágenes: solo el sitio) */
+  --media-bg: #e6e6e2;
+  --media-bg-dark: linear-gradient(160deg, #3b3b38 0%, #1f1f1d 100%);
+  --media-label: #8a8a86;
+
+  /* ---- Tipografía ---- */
+  --font-display: "Urbanist", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --text-hero: clamp(2.75rem, 1.6rem + 4.6vw, 5.25rem);  /* «Built from context.» */
+  --text-h1: clamp(2.25rem, 1.5rem + 3vw, 3.75rem);
+  --text-h2: clamp(1.875rem, 1.4rem + 1.9vw, 3rem);
+  --text-h3: clamp(1.375rem, 1.2rem + .6vw, 1.75rem);
+  --text-h4: 1.25rem;
+  --text-stat: clamp(2.25rem, 1.8rem + 1.8vw, 3.25rem);   /* «500+ proyectos» */
+  --text-lead: clamp(1.0625rem, 1rem + .3vw, 1.25rem);
+  --text-body: 1rem;
+  --text-small: .875rem;
+  --text-xs: .75rem;
+  --text-wordmark: clamp(4.5rem, 1rem + 17vw, 17rem);     /* «NORD» del pie */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  --leading-tight: 1.04;
+  --leading-snug: 1.2;
+  --leading-body: 1.55;
+  --tracking-display: -.025em;
+  --tracking-eyebrow: .08em;
+
+  /* ---- Espacio (base 4) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --section-gap: clamp(64px, 40px + 6vw, 128px);
+
+  /* ---- Formas ---- */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 18px;    /* fichas */
+  --radius-lg: 28px;    /* portada y bloques grandes */
+  --radius-pill: 999px; /* botones */
+
+  --shadow-float: 0 12px 40px rgba(15, 15, 14, .16);
+  --shadow-card-hover: 0 10px 30px rgba(15, 15, 14, .10);
+
+  /* ---- Maquetación ---- */
+  --container: 1320px;
+  --container-narrow: 860px;
+  --gutter: 16px;
+  --header-h: 76px;
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --speed: .2s;
+}
+
+@media (min-width: 768px) {
+  :root { --gutter: 32px; }
+}
+@media (min-width: 1200px) {
+  :root { --gutter: 48px; }
+}

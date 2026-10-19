@@ -1,0 +1,5 @@
+/* HABITAT.CAT — punto de entrada único del estilo.
+   Enlaza solo este archivo: <link rel="stylesheet" href="css/habitat.css"> */
+@import url("tokens.css");
+@import url("base.css");
+@import url("components.css");

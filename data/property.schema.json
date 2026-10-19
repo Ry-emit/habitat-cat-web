@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.habitatcat.com/schema/property.json",
+  "title": "Inmueble HABITAT.CAT",
+  "description": "Modelo de un inmueble tal como lo usan los componentes del kit. Los datos vienen de Inmovilla (API o feed); data-source.js traduce su formato a este. Solo id, ref, operations, type, municipality y status son obligatorios: los componentes enseñan únicamente los campos que existen.",
+  "type": "object",
+  "required": ["id", "ref", "operations", "type", "municipality", "status"],
+  "properties": {
+    "id": { "type": "string", "description": "Id del inmueble en Inmovilla (último número de la URL actual)." },
+    "agencyId": { "type": "string", "description": "Id de la oficina en Inmovilla (1098, 1213, 5436… según la cartera)." },
+    "ref": { "type": "string", "description": "Referencia visible (p. ej. 03-60395)." },
+
+    "operations": {
+      "type": "object",
+      "description": "Un inmueble puede estar a la vez en venta y en alquiler, o en alquiler con traspaso.",
+      "properties": {
+        "sale":        { "$ref": "#/$defs/price" },
+        "rent":        { "$ref": "#/$defs/price" },
+        "optionToBuy": { "$ref": "#/$defs/price" },
+        "shortTerm":   { "$ref": "#/$defs/price" },
+        "transfer":    { "$ref": "#/$defs/price" }
+      },
+      "additionalProperties": false
+    },
+    "consultPrice": { "type": "boolean", "description": "true = se muestra «Consultar precio» en lugar de cifra." },
+    "discountPct": { "type": ["number", "null"], "description": "Rebaja en %, positiva (5 = −5 %). El feed actual solo trae este dato." },
+
+    "status": { "enum": ["available", "reserved", "sold", "rented"], "description": "«reserved» muestra la etiqueta Reservado." },
+    "isNewBuild": { "type": "boolean", "description": "true = aparece en Promociones (obra nueva)." },
+    "promotionId": { "type": ["string", "null"], "description": "Promoción a la que pertenece, si la hay." },
+
+    "type": { "type": "string", "description": "Tipo según Inmovilla (clave de HABITAT_DICT.typeGroups), p. ej. «Flat»." },
+    "typeGroup": { "enum": ["apartment", "house", "rustic", "building", "garage", "commercial", "office", "land", "other"] },
+
+    "municipality": { "type": "string", "description": "Municipio, ya con acentos (Vilanova i la Geltrú)." },
+    "zone": { "type": ["string", "null"], "description": "Zona o barrio (Centre, Aiguadolç…)." },
+    "province": { "type": "string", "default": "Barcelona" },
+    "address": { "type": ["string", "null"], "description": "Solo si la agencia decide publicarla." },
+    "location": {
+      "type": ["object", "null"],
+      "properties": { "lat": { "type": "number" }, "lng": { "type": "number" }, "approximate": { "type": "boolean" } }
+    },
+
+    "bedrooms": { "type": ["integer", "null"] },
+    "bathrooms": { "type": ["integer", "null"] },
+    "surface": { "type": ["number", "null"], "description": "Superficie construida en m²." },
+    "plotSurface": { "type": ["number", "null"], "description": "Superficie de parcela en m² (casas y terrenos)." },
+
+    "condition": { "type": ["string", "null"], "description": "Estado: a estrenar, buen estado, a reformar…" },
+    "yearBuilt": { "type": ["integer", "null"] },
+    "communityFees": { "$ref": "#/$defs/price" },
+    "propertyTax": { "type": ["number", "null"], "description": "IBI anual en euros." },
+    "regime": { "type": ["string", "null"], "description": "Régimen: libre, protección oficial…" },
+    "extras": {
+      "type": "array",
+      "items": { "enum": ["pool", "parking", "lift", "terrace", "furnished", "urbanization", "newBuild", "seaView"] }
+    },
+
+    "energy": {
+      "type": ["object", "null"],
+      "properties": {
+        "rating": { "enum": ["A", "B", "C", "D", "E", "F", "G", "exempt", "pending"] },
+        "consumption": { "type": ["number", "null"], "description": "kWh/m² año" },
+        "consumptionRating": { "enum": ["A", "B", "C", "D", "E", "F", "G", null] },
+        "emissions": { "type": ["number", "null"], "description": "kg CO₂/m² año" },
+        "emissionsRating": { "enum": ["A", "B", "C", "D", "E", "F", "G", null] }
+      }
+    },
+
+    "title": { "$ref": "#/$defs/i18n", "description": "Opcional; si falta se compone «Tipo – Municipio (Zona)»." },
+    "description": { "$ref": "#/$defs/i18n" },
+
+    "photos": {
+      "type": "array",
+      "description": "En orden. Vacío = el kit enseña huecos de foto.",
+      "items": {
+        "type": "object",
+        "required": ["src"],
+        "properties": {
+          "src": { "type": "string", "description": "Foto grande (hoy fotos15.apinmo.com/{agencia}/{id}/3-N.jpg)." },
+          "thumb": { "type": "string" },
+          "alt": { "$ref": "#/$defs/i18n" },
+          "width": { "type": "integer" },
+          "height": { "type": "integer" }
+        }
+      }
+    },
+    "virtualTourUrl": { "type": ["string", "null"] },
+    "videoUrl": { "type": ["string", "null"] },
+
+    "publishedAt": { "type": ["string", "null"], "format": "date-time" },
+    "updatedAt": { "type": ["string", "null"], "format": "date-time" },
+    "sourceUrl": { "type": ["string", "null"], "description": "URL de la ficha en la web actual (para redirecciones 301)." }
+  },
+
+  "$defs": {
+    "price": {
+      "type": ["object", "null"],
+      "required": ["amount"],
+      "properties": {
+        "amount": { "type": ["number", "null"], "description": "En euros. null solo con consultPrice = true." },
+        "previous": { "type": ["number", "null"], "description": "Precio anterior si hay rebaja; se muestra tachado." },
+        "period": { "enum": ["once", "month", "day", "week", "year"], "default": "once" },
+        "currency": { "const": "EUR" }
+      }
+    },
+    "i18n": {
+      "type": ["object", "null"],
+      "description": "Un texto por idioma: { \"ca\": \"…\", \"es\": \"…\", \"en\": \"…\" }.",
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}

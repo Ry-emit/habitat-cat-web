@@ -1,0 +1,53 @@
+<div class="floating-actions" data-component="floating-actions">
+  <div class="popover" id="callback" hidden data-component="callback">
+    <div class="popover__head">
+      <div><span class="eyebrow">¿Alguna pregunta?</span><h2 class="h4">Te llamamos nosotros</h2></div>
+      <button class="popover__close" type="button" data-action="close-popover" aria-label="Cerrar"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <form class="form" data-form="callback" novalidate>
+      <div class="field"><label class="field__label" for="cb-name">Nombre <span class="req">*</span></label><input class="input" id="cb-name" name="nombre" autocomplete="name" required></div>
+      <div class="field"><label class="field__label" for="cb-phone">Teléfono <span class="req">*</span></label><input class="input" id="cb-phone" name="telefono" type="tel" autocomplete="tel" required></div>
+      <div class="field"><label class="field__label" for="cb-when">Comentarios u hora preferida</label><input class="input" id="cb-when" name="comentarios" placeholder="Por la tarde, a partir de las 17 h"></div>
+      <!-- @include consent-contacto -->
+      <div class="form__actions"><button class="btn btn--primary btn--block" type="submit">Llamadme</button><p class="form__status" role="status" aria-live="polite"></p></div>
+    </form>
+  </div>
+
+  <div class="popover" id="whatsapp" hidden data-component="whatsapp">
+    <div class="popover__head">
+      <div><span class="eyebrow">WhatsApp · 678 653 335</span></div>
+      <button class="popover__close" type="button" data-action="close-popover" aria-label="Cerrar"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <p class="whatsapp-bubble__msg"><strong>¡Hola!</strong>Escríbenos por WhatsApp y te respondemos enseguida.</p>
+    <a class="btn btn--primary btn--block" href="https://wa.me/34678653335?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20inmueble" rel="noopener">
+      <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>Abrir WhatsApp
+    </a>
+  </div>
+
+  <button class="fab fab--light" type="button" aria-expanded="false" aria-controls="callback" data-action="toggle-popover">
+    <svg class="icon" aria-hidden="true"><use href="#i-callback"/></svg><span class="fab__label">Te llamamos</span>
+  </button>
+  <button class="fab" type="button" aria-expanded="false" aria-controls="whatsapp" data-action="toggle-popover">
+    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span class="fab__label">WhatsApp</span>
+  </button>
+</div>
+
+<section class="cookie-banner" hidden aria-labelledby="cookies-titulo" data-component="cookie-banner">
+  <div>
+    <h2 class="cookie-banner__title" id="cookies-titulo">Usamos cookies</h2>
+    <p class="cookie-banner__text">Las técnicas hacen que la web funcione. Con tu permiso, usamos también cookies de análisis para mejorarla. <a href="{{pages}}cookies.html">Política de cookies</a></p>
+  </div>
+  <div class="cookie-banner__prefs" hidden data-cookie-prefs>
+    <label class="switch-row"><span>Técnicas<small>Necesarias: sesión, favoritos, seguridad (reCAPTCHA).</small></span><input class="switch" type="checkbox" checked disabled></label>
+    <label class="switch-row"><span>Análisis<small>Estadísticas de uso (p. ej. PostHog, Google).</small></span><input class="switch" type="checkbox" name="analytics"></label>
+    <label class="switch-row"><span>Publicidad<small>Anuncios personalizados.</small></span><input class="switch" type="checkbox" name="ads"></label>
+  </div>
+  <div class="cookie-banner__actions">
+    <button class="btn btn--primary btn--sm" type="button" data-cookies="accept">Aceptar todas</button>
+    <button class="btn btn--outline btn--sm" type="button" data-cookies="reject">Rechazar</button>
+    <button class="btn btn--soft btn--sm" type="button" data-cookies="manage">Configurar</button>
+    <button class="btn btn--primary btn--sm" type="button" data-cookies="save" hidden>Guardar selección</button>
+  </div>
+</section>
+
+<datalist id="areas-list" data-fill="areas"></datalist>

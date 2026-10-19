@@ -1,0 +1,145 @@
+<!--meta {"title": "Inmobiliaria en Vilanova i la Geltrú: pisos y casas en venta y alquiler · HABITAT.CAT", "description": "Pisos, casas, locales y terrenos en venta y alquiler en Vilanova i la Geltrú, Sitges, Sant Pere de Ribes, Olivella y Canyelles. Valoración gratuita y financiación hasta el 100 %.", "route": "/", "nav": "inicio", "header": "overlay"} -->
+<!-- @include head -->
+<body data-page="inicio" data-pages="{{pages}}">
+<!-- @include icons -->
+<!-- @include header -->
+
+<main id="contenido">
+  <!-- 1. Portada con buscador -->
+  <section class="hero" aria-labelledby="hero-titulo" data-component="hero">
+    <div class="hero__media media media--dark" data-label="Foto de portada" data-slot="hero"><img src="{{root}}img/sitio/slider/2_l.jpg" alt="Casa con piscina en el Garraf"></div>
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <span class="eyebrow">Vilanova i la Geltrú · Garraf · Penedès</span>
+        <h1 class="display-hero" id="hero-titulo">Encontramos la casa de tus sueños.</h1>
+        <p class="hero__lead">Compra, venta y alquiler de pisos, casas y locales en Vilanova i la Geltrú y toda la provincia de Barcelona, con financiación hasta el 100 %.</p>
+      </div>
+      <div class="hero__search">
+        <!-- @include search -->
+      </div>
+      <div class="hero__foot">
+        <p class="hero__note">Un equipo joven y dinámico, con un objetivo común: que encuentres lo que buscas.</p>
+        <ul class="stat-row" aria-label="Cifras">
+          <li class="stat"><span class="stat__value">463</span><span class="stat__label">inmuebles</span></li>
+          <li class="stat"><span class="stat__value">405</span><span class="stat__label">en venta</span></li>
+          <li class="stat"><span class="stat__value">58</span><span class="stat__label">en alquiler</span></li>
+          <li class="stat"><span class="stat__value">100 %</span><span class="stat__label">financiación</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Valoración gratuita -->
+  <section class="section" id="valoracion" aria-labelledby="val-titulo" data-component="valuation">
+    <div class="container split">
+      <div class="split__copy">
+        <span class="eyebrow">Valoración gratuita</span>
+        <h2 class="h1" id="val-titulo">Valoremos tu inmueble.</h2>
+        <p class="lead">¿Quieres saber el precio de mercado actual de tu inmueble?</p>
+        <form class="form valuation__form" data-form="valoracion" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="v-type">Tipo de inmueble <span class="req">*</span></label>
+              <select class="select" id="v-type" name="tipo" required>
+                <option value="">Elige uno</option>
+                <option>Piso</option><option>Dúplex</option><option>Ático</option><option>Casa independiente</option><option>Planta baja</option><option>Local comercial</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="v-area">Zona <span class="req">*</span></label>
+              <input class="input" id="v-area" name="zona" list="areas-list" required placeholder="Municipio o barrio">
+            </div>
+          </div>
+          <fieldset class="field">
+            <legend class="field__label">¿Tiene ascensor?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="ascensor" value="si"><span>Sí</span></label>
+              <label class="chip"><input type="radio" name="ascensor" value="no" checked><span>No</span></label>
+            </div>
+          </fieldset>
+          <!-- @include consent-valoracion -->
+          <div class="form__actions">
+            <button class="btn btn--primary btn--lg" type="submit">Valorar<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+      <div class="media ratio-4x5" data-label="Foto · salón luminoso" data-slot="valuation"><img src="{{root}}img/sitio/slider/1551974789_l.jpg" alt="Salón luminoso" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- 3. Alertas y Publica tu inmueble -->
+  <section class="section section--tight" aria-label="Servicios">
+    <div class="container cta-pair">
+      <a class="cta-card" href="{{pages}}alertas.html">
+        <span class="cta-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg></span>
+        <div class="cta-card__foot">
+          <div><p class="cta-card__title">Alertas</p><p class="cta-card__text">Dinos qué buscas y te enviamos cada inmueble nuevo que encaje.</p></div>
+          <svg class="icon" aria-hidden="true" style="width:28px;height:28px"><use href="#i-arrow-up-right"/></svg>
+        </div>
+      </a>
+      <a class="cta-card cta-card--dark" href="{{pages}}publica-tu-inmueble.html">
+        <span class="cta-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-upload-home"/></svg></span>
+        <div class="cta-card__foot">
+          <div><p class="cta-card__title">Publica tu inmueble</p><p class="cta-card__text">Véndelo o alquílalo con nosotros: lo valoramos y lo movemos entre nuestros clientes.</p></div>
+          <svg class="icon" aria-hidden="true" style="width:28px;height:28px"><use href="#i-arrow-up-right"/></svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 4. Listado -->
+  <section class="section" aria-labelledby="list-titulo">
+    <div class="container">
+      <header class="section-head section-head--split">
+        <div class="section-head__titles">
+          <span class="eyebrow">Inmuebles</span>
+          <h2 class="h2" id="list-titulo">Nuestra cartera.</h2>
+        </div>
+        <p class="section-head__aside">Pisos, casas, áticos, locales, terrenos y parkings en Vilanova i la Geltrú, Sitges, Olivella, Sant Pere de Ribes, Canyelles y alrededores.</p>
+      </header>
+      <div data-listing data-size="12" data-sort="recientes" data-component="listing">
+        <!-- @include listing -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Mapa -->
+  <section class="section section--tight" aria-labelledby="mapa-titulo">
+    <div class="container">
+      <header class="section-head section-head--split">
+        <div class="section-head__titles"><span class="eyebrow">Mapa</span><h2 class="h2" id="mapa-titulo">Todos los inmuebles, en el mapa.</h2></div>
+      </header>
+      <div class="map-block">
+        <div class="media media--map ratio-21x9" data-label="Mapa interactivo de inmuebles" data-slot="properties-map"></div>
+        <a class="btn btn--light map-block__legend" href="{{pages}}venta.html?mapa=1"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg>Abrir el mapa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Boletín -->
+  <section class="section" aria-labelledby="news-titulo">
+    <div class="container">
+      <div class="newsletter on-dark" data-component="newsletter">
+        <div class="stack">
+          <span class="eyebrow">Novedades</span>
+          <h2 class="h2" id="news-titulo">Sé el primero en ver los inmuebles nuevos.</h2>
+        </div>
+        <form class="newsletter__form" data-form="boletin" novalidate>
+          <div class="newsletter__row">
+            <label class="visually-hidden" for="n-email">Email</label>
+            <input class="input" id="n-email" name="email" type="email" autocomplete="email" required placeholder="tu@email.com">
+            <button class="btn btn--light" type="submit">Suscribirme</button>
+          </div>
+          <label class="check"><input type="checkbox" name="privacidad" required><span>Acepto la <a href="{{pages}}privacidad.html">política de privacidad</a>.</span></label>
+          <label class="check"><input type="checkbox" name="publicidad"><span>Acepto recibir publicidad de HABITAT.CAT.</span></label>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @include footer -->
+<!-- @include floating -->
+<!-- @include scripts -->

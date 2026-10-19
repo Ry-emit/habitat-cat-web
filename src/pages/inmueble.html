@@ -1,0 +1,180 @@
+<!--meta {"title": "Inmueble · HABITAT.CAT", "description": "Ficha del inmueble: fotos, precio, características, certificado energético, ubicación y simulador de hipoteca.", "route": "/property/{tipo}/{municipio}/{zona}/{id}", "nav": "venta"} -->
+<!-- @include head -->
+<body data-page="inmueble" data-pages="{{pages}}">
+<!-- @include icons -->
+<!-- @include header -->
+
+<main id="contenido" data-detail data-component="property-detail">
+  <div class="container">
+    <!-- 1. Título, agencia y acciones -->
+    <header class="detail-head">
+      <div class="detail-head__titles">
+        <nav aria-label="Migas"><ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li><a href="venta.html" data-bind="crumb-op" data-bind-href="op">Venta</a></li><li aria-current="page">Ref. <span data-bind="ref">—</span></li></ol></nav>
+        <div class="cluster" data-bind="badges"></div>
+        <h1 class="h1" data-bind="title">Tipo – Municipio (Zona)</h1>
+        <p class="detail-head__agency">
+          <span>HABITAT.CAT · consultors immobiliaris</span>
+          <a href="tel:+34938147330"><svg class="icon" aria-hidden="true" style="display:inline;vertical-align:-3px"><use href="#i-phone"/></svg> 938 147 330</a>
+          <span>Ref. <span data-bind="ref">—</span></span>
+        </p>
+      </div>
+      <!-- 2. Precio -->
+      <div class="detail-head__side">
+        <div class="price price--lg" data-bind="price"></div>
+        <div class="cluster">
+          <button class="btn btn--outline" type="button" aria-pressed="false" data-action="favorite-detail"><svg class="icon icon--heart" aria-hidden="true"><use href="#i-heart"/></svg><span>Guardar</span></button>
+          <button class="btn btn--primary" type="button" data-action="open-modal" data-target="proponer-precio"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg>Proponer un precio</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. Galería -->
+    <section class="gallery" data-gallery aria-label="Fotos del inmueble">
+      <div class="media gallery__main" data-slot="photo-1"></div>
+      <div class="gallery__thumbs">
+        <div class="media" data-slot="photo-2"></div>
+        <div class="media" data-slot="photo-3"></div>
+        <div class="media" data-slot="photo-4"></div>
+        <div class="gallery__more">
+          <div class="media" data-slot="photo-5" style="height:100%"></div>
+          <button class="btn btn--light btn--sm" type="button"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg>Ver las <span data-photo-total>5</span> fotos</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="detail-layout">
+      <div class="detail-layout__main">
+        <!-- 4. Descripción -->
+        <section aria-labelledby="desc-t" class="stack" style="--stack:24px">
+          <ul class="key-facts" data-bind="facts"></ul>
+          <h2 class="h3" id="desc-t">Descripción</h2>
+          <div class="prose" data-bind="description">
+            <p class="slot-note" style="min-height:140px">Texto del anuncio desde Inmovilla (campo descripción, en cada idioma).</p>
+          </div>
+        </section>
+
+        <!-- 5. Características -->
+        <section aria-labelledby="feat-t">
+          <h2 class="h3" id="feat-t" style="margin-bottom:16px">Características</h2>
+          <dl class="features" data-bind="features"></dl>
+          <ul class="extras-list" data-bind="extras"></ul>
+        </section>
+
+        <!-- 6. Certificado energético -->
+        <section aria-labelledby="energy-t">
+          <h2 class="h3" id="energy-t" style="margin-bottom:16px">Certificado energético</h2>
+          <div class="energy" data-energy data-component="energy-certificate">
+            <ul class="energy__scale" data-energy-scale aria-label="Escala de eficiencia energética"></ul>
+            <div class="energy__values">
+              <div class="energy__value"><span>Calificación</span><strong data-energy-rating>—</strong></div>
+              <div class="energy__value"><span>Consumo de energía</span><strong data-energy-consumption>—</strong></div>
+              <div class="energy__value"><span>Emisiones</span><strong data-energy-emissions>—</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Ubicación -->
+        <section aria-labelledby="map-t">
+          <h2 class="h3" id="map-t" style="margin-bottom:16px">Ubicación</h2>
+          <div class="media media--map ratio-16x9" data-label="Mapa de la zona con servicios cercanos" data-slot="detail-map"></div>
+          <p class="small muted" style="margin-top:8px">La ubicación es aproximada.</p>
+        </section>
+
+        <!-- 9. Simulador de hipoteca -->
+        <section aria-labelledby="hipoteca" id="hipoteca">
+          <h2 class="h3" id="hipoteca-t" style="margin-bottom:16px">Simulador de hipoteca</h2>
+          <form class="mortgage" data-mortgage data-component="mortgage-simulator">
+            <div class="form">
+              <div class="form__row">
+                <div class="field">
+                  <label class="field__label" for="m-region">Comunidad autónoma</label>
+                  <select class="select" id="m-region" name="region">
+                    <option selected>Cataluña</option><option>Andalucía</option><option>Aragón</option><option>Asturias</option><option>Baleares</option><option>Canarias</option><option>Cantabria</option><option>Castilla-La Mancha</option><option>Castilla y León</option><option>Comunidad de Madrid</option><option>Comunidad Valenciana</option><option>Extremadura</option><option>Galicia</option><option>La Rioja</option><option>Murcia</option><option>Navarra</option><option>País Vasco</option><option>Ceuta</option><option>Melilla</option>
+                  </select>
+                </div>
+                <fieldset class="field">
+                  <legend class="field__label">Estado</legend>
+                  <div class="segmented">
+                    <label><input type="radio" name="condition" value="new"><span>Obra nueva</span></label>
+                    <label><input type="radio" name="condition" value="used" checked><span>Segunda mano</span></label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="form__row form__row--2">
+                <div class="field"><label class="field__label" for="m-price">Precio</label><div class="input-group"><input class="input" id="m-price" name="price" type="number" min="0" step="1000" value="120000"><span class="input-group__suffix">€</span></div></div>
+                <div class="field"><label class="field__label" for="m-saved">Ahorro aportado</label><div class="input-group"><input class="input" id="m-saved" name="saved" type="number" min="0" step="1000" value="36000"><span class="input-group__suffix">€</span></div></div>
+              </div>
+              <div class="form__row form__row--2">
+                <div class="field"><label class="field__label" for="m-years">Plazo</label><div class="input-group"><input class="input" id="m-years" name="years" type="number" min="1" max="40" value="30"><span class="input-group__suffix">años</span></div></div>
+                <div class="field"><label class="field__label" for="m-rate">Tipo de interés</label><div class="input-group"><input class="input" id="m-rate" name="rate" type="number" min="0" max="15" step="0.05" value="3"><span class="input-group__suffix">%</span></div></div>
+              </div>
+            </div>
+            <div class="mortgage__result on-dark" aria-live="polite">
+              <dl>
+                <div><dt>Impuestos de compra (10 %)</dt><dd data-out="taxes">—</dd></div>
+                <div><dt>Precio + impuestos</dt><dd data-out="total">—</dd></div>
+                <div><dt>Importe de la hipoteca</dt><dd data-out="loan">—</dd></div>
+              </dl>
+              <div class="mortgage__monthly"><span>Cuota mensual</span><strong data-out="monthly">—</strong></div>
+              <p class="mortgage__note">Cálculo orientativo. Te ayudamos a financiar hasta el 100 % del crédito y la hipoteca.</p>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <!-- 8. Contacto sobre este inmueble -->
+      <aside class="detail-aside" aria-labelledby="contact-t">
+        <div class="panel">
+          <h2 class="panel__title" id="contact-t">¿Te interesa? Escríbenos</h2>
+          <form class="form" data-form="contacto-inmueble" novalidate>
+            <input type="hidden" name="ref" value="">
+            <div class="field"><label class="field__label" for="d-name">Nombre <span class="req">*</span></label><input class="input input--on-paper" id="d-name" name="nombre" autocomplete="name" required></div>
+            <div class="field"><label class="field__label" for="d-email">Email <span class="req">*</span></label><input class="input input--on-paper" id="d-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label class="field__label" for="d-phone">Teléfono</label><input class="input input--on-paper" id="d-phone" name="telefono" type="tel" autocomplete="tel"></div>
+            <div class="field"><label class="field__label" for="d-msg">Mensaje</label><textarea class="textarea textarea--on-paper" id="d-msg" name="mensaje">Hola, me interesa este inmueble. ¿Podemos concertar una visita?</textarea></div>
+            <!-- @include consent-contacto -->
+            <button class="btn btn--primary btn--block btn--lg" type="submit">Enviar</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="panel panel--line cluster" style="justify-content:space-between">
+          <span class="small"><strong>938 147 330</strong><br><span class="muted">Llámanos o escríbenos por WhatsApp</span></span>
+          <a class="btn btn--soft btn--icon" href="https://wa.me/34678653335" aria-label="WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 10. Parecidos -->
+  <section class="section section--mist" aria-labelledby="rel-t">
+    <div class="container">
+      <header class="section-head section-head--split">
+        <div class="section-head__titles"><span class="eyebrow">También te puede interesar</span><h2 class="h2" id="rel-t">Inmuebles parecidos.</h2></div>
+      </header>
+      <div class="property-grid property-grid--4" data-related></div>
+    </div>
+  </section>
+
+  <!-- Proponer un precio -->
+  <dialog class="modal" id="proponer-precio" aria-labelledby="pp-t">
+    <form class="modal__inner" data-form="proponer-precio" novalidate>
+      <div class="modal__head">
+        <div><span class="eyebrow">Ref. <span data-bind="ref">—</span></span><h2 class="h3" id="pp-t">Proponer un precio</h2></div>
+        <button class="popover__close" type="button" data-action="close-modal" aria-label="Cerrar"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <input type="hidden" name="ref" value="">
+      <div class="field"><label class="field__label" for="pp-amount">Tu propuesta <span class="req">*</span></label><div class="input-group"><input class="input" id="pp-amount" name="propuesta" type="number" min="0" step="1000" required><span class="input-group__suffix">€</span></div></div>
+      <div class="form__row form__row--2">
+        <div class="field"><label class="field__label" for="pp-name">Nombre <span class="req">*</span></label><input class="input" id="pp-name" name="nombre" required></div>
+        <div class="field"><label class="field__label" for="pp-phone">Teléfono <span class="req">*</span></label><input class="input" id="pp-phone" name="telefono" type="tel" required></div>
+      </div>
+      <div class="field"><label class="field__label" for="pp-email">Email <span class="req">*</span></label><input class="input" id="pp-email" name="email" type="email" required></div>
+      <!-- @include consent-contacto -->
+      <div class="form__actions"><button class="btn btn--primary btn--lg" type="submit">Enviar propuesta</button><p class="form__status" role="status" aria-live="polite"></p></div>
+    </form>
+  </dialog>
+</main>
+
+<!-- @include footer -->
+<!-- @include floating -->
+<!-- @include scripts -->

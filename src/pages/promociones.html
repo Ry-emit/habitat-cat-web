@@ -1,0 +1,66 @@
+<!--meta {"title": "Obra nueva en Vilanova i la Geltrú y el Garraf: promociones · HABITAT.CAT", "description": "Promociones de obra nueva en Vilanova i la Geltrú, Sitges y el Garraf: pisos, áticos y casas a estrenar, con financiación hasta el 100 %.", "route": "/promotions", "nav": "promociones"} -->
+<!-- @include head -->
+<body data-page="promociones" data-pages="{{pages}}">
+<!-- @include icons -->
+<!-- @include header -->
+
+<main id="contenido">
+  <div class="search-strip">
+    <div class="container">
+      <!-- @include search -->
+    </div>
+  </div>
+
+  <section class="page-head page-head--split">
+    <div class="container page-head__inner">
+      <div class="stack">
+        <nav aria-label="Migas"><ol class="breadcrumb"><li><a href="index.html">Inicio</a></li><li aria-current="page">Obra nueva</li></ol></nav>
+        <span class="eyebrow">Promociones</span>
+        <h1 class="h1">Obra nueva</h1>
+      </div>
+      <p class="lead">Promovemos, construimos y vendemos viviendas a estrenar. Elige la tuya sobre plano o lista para entrar.</p>
+    </div>
+  </section>
+
+  <!-- Tarjeta de promoción: una por promoción (datos de Inmovilla: promoción + sus unidades) -->
+  <section class="section section--tight" style="padding-top:0" aria-label="Promociones">
+    <div class="container">
+      <div class="grid grid--2" style="--grid-gap: 24px">
+        <article class="hero-card" data-component="promotion-card">
+          <div class="media media--dark" data-label="Foto · fachada de la promoción" data-slot="promotion"></div>
+          <div class="hero-card__copy">
+            <div class="cluster"><span class="badge">En construcción</span><span class="badge badge--dark">Entrega [trimestre y año]</span></div>
+            <h2 class="h2">[Nombre de la promoción]</h2>
+            <p class="small" style="opacity:.8">[Municipio] · [n.º] viviendas de [n.º] a [n.º] habitaciones · desde [precio] €</p>
+            <div class="cluster"><a class="btn btn--light" href="#">Ver la promoción<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+          </div>
+        </article>
+        <article class="hero-card" data-component="promotion-card">
+          <div class="media media--dark" data-label="Foto · fachada de la promoción" data-slot="promotion"></div>
+          <div class="hero-card__copy">
+            <div class="cluster"><span class="badge">Últimas unidades</span><span class="badge badge--dark">Llave en mano</span></div>
+            <h2 class="h2">[Nombre de la promoción]</h2>
+            <p class="small" style="opacity:.8">[Municipio] · [n.º] viviendas · desde [precio] €</p>
+            <div class="cluster"><a class="btn btn--light" href="#">Ver la promoción<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="unidades">
+    <div class="container">
+      <header class="section-head section-head--split">
+        <div class="section-head__titles"><span class="eyebrow">Unidades</span><h2 class="h2" id="unidades">Viviendas a estrenar.</h2></div>
+        <p class="section-head__aside">Cada vivienda de obra nueva de la cartera, con su precio y su ficha.</p>
+      </header>
+      <div data-listing data-new-build data-size="12" data-sort="recientes" data-component="listing">
+        <!-- @include listing -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @include footer -->
+<!-- @include floating -->
+<!-- @include scripts -->

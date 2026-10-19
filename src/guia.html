@@ -1,0 +1,476 @@
+<!--meta {"title": "Guía de estilo · HABITAT.CAT", "description": "Sistema de diseño de la web de HABITAT.CAT: colores, tipografía, espacios y todos los componentes.", "route": "/guia"} -->
+<!-- @include head -->
+<body data-page="guia" data-pages="{{pages}}" data-no-cookie-banner>
+<!-- @include icons -->
+<!-- @include header -->
+
+<main id="contenido">
+  <section class="page-head">
+    <div class="container page-head__inner" style="grid-template-columns:1fr">
+      <span class="eyebrow">Sistema de diseño · v1 · octubre 2026</span>
+      <h1 class="display-hero">HABITAT.CAT<br>guía de estilo.</h1>
+      <p class="lead" style="max-width:62ch">Monocromo, la foto manda, titulares grandes en sans geométrica, botones píldora y esquinas redondeadas. Sacado de tres referencias: <strong>Vista</strong> (portada a sangre con cifras), <strong>NORD</strong> (bloques limpios y el nombre gigante en el pie) y <strong>Real Estate</strong> (tarjetas redondeadas y fichas gris claro). Donde irá una foto hay un <strong>hueco</strong> con su etiqueta: mete un <code>&lt;img&gt;</code> dentro y la etiqueta desaparece.</p>
+      <div class="cluster"><a class="btn btn--primary" href="paginas/index.html">Ver la portada<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></a><a class="btn btn--outline" href="#componentes">Ir a los componentes</a></div>
+    </div>
+  </section>
+
+  <nav class="sg-nav" aria-label="Secciones de la guía">
+    <ul class="container">
+      <li><a href="#color">Color</a></li><li><a href="#tipografia">Tipografía</a></li><li><a href="#espacio">Espacio y forma</a></li><li><a href="#iconos">Iconos</a></li>
+      <li><a href="#componentes">Botones</a></li><li><a href="#etiquetas">Etiquetas</a></li><li><a href="#huecos">Huecos de foto</a></li><li><a href="#campos">Formularios</a></li>
+      <li><a href="#cabecera">Cabecera</a></li><li><a href="#buscador">Buscador</a></li><li><a href="#portada">Portada</a></li><li><a href="#cifras">Cifras</a></li>
+      <li><a href="#bloques">Bloques</a></li><li><a href="#ficha">Ficha de inmueble</a></li><li><a href="#listado">Listado</a></li><li><a href="#detalle">Detalle</a></li>
+      <li><a href="#empresa">Empresa</a></li><li><a href="#boletin">Boletín</a></li><li><a href="#flotantes">Flotantes</a></li><li><a href="#pie">Pie</a></li><li><a href="#paginas">Páginas</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Color ===== -->
+  <section class="sg-section" id="color">
+    <div class="container">
+      <header><span class="eyebrow">Fundamentos</span><h2 class="h2">Color</h2><p class="muted">Blanco, negro y gris claro. Sin color de acento: el color lo ponen las fotos. <code>--color-accent</code> vale tinta; cámbialo en <code>css/tokens.css</code> si se recupera el rojo del tejado del logo.</p></header>
+      <div class="sg-swatches">
+        <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--color-ink)"></div><div class="sg-swatch__info"><strong>Tinta</strong><span>--color-ink · #0F0F0E</span></div></div>
+        <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--color-ink-soft)"></div><div class="sg-swatch__info"><strong>Tinta suave</strong><span>--color-ink-soft · #2A2A28</span></div></div>
+        <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--color-paper)"></div><div class="sg-swatch__info"><strong>Papel</strong><span>--color-paper · #FFFFFF</span></div></div>
+        <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--color-mist)"></div><div class="sg-swatch__info"><strong>Niebla</strong><span>--color-mist · #F2F2F0</span></div></div>
+        <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--color-mist-strong)"></div><div class="sg-swatch__info"><strong>Niebla fuerte</strong><span>--color-mist-strong · #E8E8E5</span></div></div>
+        <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--color-line)"></div><div class="sg-swatch__info"><strong>Línea</strong><span>--color-line · #E2E2DF</span></div></div>
+        <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--color-muted)"></div><div class="sg-swatch__info"><strong>Texto secundario</strong><span>--color-muted · #6B6B68</span></div></div>
+        <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--media-bg)"></div><div class="sg-swatch__info"><strong>Hueco de foto</strong><span>--media-bg · #E6E6E2</span></div></div>
+      </div>
+      <p class="sg-label" style="margin-top:32px">Funcionales: certificado energético (A–G) y estados</p>
+      <div class="cluster" style="--cluster:6px">
+        <span class="badge" style="background:var(--energy-a);color:#fff">A</span><span class="badge" style="background:var(--energy-b);color:#fff">B</span><span class="badge" style="background:var(--energy-c)">C</span><span class="badge" style="background:var(--energy-d)">D</span><span class="badge" style="background:var(--energy-e)">E</span><span class="badge" style="background:var(--energy-f);color:#fff">F</span><span class="badge" style="background:var(--energy-g);color:#fff">G</span>
+        <span class="badge" style="background:var(--color-error);color:#fff">Error</span><span class="badge" style="background:var(--color-success);color:#fff">Correcto</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Tipografía ===== -->
+  <section class="sg-section" id="tipografia">
+    <div class="container">
+      <header><span class="eyebrow">Fundamentos</span><h2 class="h2">Tipografía</h2><p class="muted"><strong>Urbanist</strong> para titulares, cifras y el nombre del pie; <strong>Inter</strong> para todo lo demás. Las dos libres (SIL OFL) y servidas desde <code>fonts/</code>.</p></header>
+      <div class="sg-type-row"><span class="sg-label">Portada · .display-hero</span><p class="display-hero">Encontramos tu casa.</p></div>
+      <div class="sg-type-row"><span class="sg-label">H1 · .h1</span><p class="h1" style="font-family:var(--font-display);font-weight:500;letter-spacing:-.025em">Inmuebles en venta</p></div>
+      <div class="sg-type-row"><span class="sg-label">H2 · .h2</span><p class="h2" style="font-family:var(--font-display);font-weight:500;letter-spacing:-.025em">Nuestra cartera.</p></div>
+      <div class="sg-type-row"><span class="sg-label">H3 · .h3</span><p class="h3" style="font-family:var(--font-display);font-weight:500;letter-spacing:-.02em">Simulador de hipoteca</p></div>
+      <div class="sg-type-row"><span class="sg-label">H4 · .h4</span><p class="h4" style="font-family:var(--font-display);font-weight:500">Te llamamos nosotros</p></div>
+      <div class="sg-type-row"><span class="sg-label">Cifra · .stat__value</span><p class="stat__value">463</p></div>
+      <div class="sg-type-row"><span class="sg-label">Entradilla · .lead</span><p class="lead">Compra, venta y alquiler de pisos, casas y locales en Vilanova i la Geltrú.</p></div>
+      <div class="sg-type-row"><span class="sg-label">Texto · body 16 px</span><p>Disponemos de una amplia oferta inmobiliaria de viviendas nuevas y de segunda mano, chalets y fincas por toda la provincia.</p></div>
+      <div class="sg-type-row"><span class="sg-label">Pequeño · .small</span><p class="small muted">Cálculo orientativo. La ubicación es aproximada.</p></div>
+      <div class="sg-type-row"><span class="sg-label">Antetítulo · .eyebrow</span><p><span class="eyebrow">Valoración gratuita</span></p></div>
+    </div>
+  </section>
+
+  <!-- ===== Espacio y forma ===== -->
+  <section class="sg-section" id="espacio">
+    <div class="container grid grid--2" style="--grid-gap:48px">
+      <div>
+        <header><span class="eyebrow">Fundamentos</span><h2 class="h2">Espacio</h2><p class="muted">Base de 4 px. Entre secciones, <code>--section-gap</code> (64–128 px según pantalla).</p></header>
+        <div class="stack" style="--stack:10px">
+          <div class="sg-space"><span style="width:90px">--space-1 · 4</span><span class="sg-space__bar" style="width:4px"></span></div>
+          <div class="sg-space"><span style="width:90px">--space-2 · 8</span><span class="sg-space__bar" style="width:8px"></span></div>
+          <div class="sg-space"><span style="width:90px">--space-3 · 12</span><span class="sg-space__bar" style="width:12px"></span></div>
+          <div class="sg-space"><span style="width:90px">--space-4 · 16</span><span class="sg-space__bar" style="width:16px"></span></div>
+          <div class="sg-space"><span style="width:90px">--space-5 · 24</span><span class="sg-space__bar" style="width:24px"></span></div>
+          <div class="sg-space"><span style="width:90px">--space-6 · 32</span><span class="sg-space__bar" style="width:32px"></span></div>
+          <div class="sg-space"><span style="width:90px">--space-7 · 48</span><span class="sg-space__bar" style="width:48px"></span></div>
+          <div class="sg-space"><span style="width:90px">--space-8 · 64</span><span class="sg-space__bar" style="width:64px"></span></div>
+          <div class="sg-space"><span style="width:90px">--space-9 · 96</span><span class="sg-space__bar" style="width:96px"></span></div>
+          <div class="sg-space"><span style="width:90px">--space-10 · 128</span><span class="sg-space__bar" style="width:128px"></span></div>
+        </div>
+      </div>
+      <div>
+        <header><span class="eyebrow">Fundamentos</span><h2 class="h2">Forma</h2><p class="muted">Esquinas redondeadas en todo; píldora en botones, etiquetas y selectores.</p></header>
+        <div class="sg-radii">
+          <div style="border-radius:var(--radius-xs)">xs · 8</div><div style="border-radius:var(--radius-sm)">sm · 12</div><div style="border-radius:var(--radius-md)">md · 18</div><div style="border-radius:var(--radius-lg)">lg · 28</div><div style="border-radius:var(--radius-pill)">píldora</div>
+        </div>
+        <p class="sg-label" style="margin-top:32px">Sombras: solo en lo que flota</p>
+        <div class="cluster" style="--cluster:24px"><div class="panel" style="background:#fff;box-shadow:var(--shadow-float)">--shadow-float</div><div class="panel" style="background:#fff;box-shadow:var(--shadow-card-hover)">--shadow-card-hover</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Iconos ===== -->
+  <section class="sg-section" id="iconos">
+    <div class="container">
+      <header><span class="eyebrow">Fundamentos</span><h2 class="h2">Iconos</h2><p class="muted">Trazo de 1,6, esquinas redondas. Uso: <code>&lt;svg class="icon"&gt;&lt;use href="#i-bed"/&gt;&lt;/svg&gt;</code></p></header>
+      <div class="cluster" id="sg-icons" style="--cluster:8px"></div>
+    </div>
+  </section>
+
+  <!-- ===== Botones ===== -->
+  <section class="sg-section" id="componentes">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Botones</h2><p class="muted"><code>.btn</code> + variante + tamaño. El principal es negro; sobre foto, blanco relleno y contorno blanco (como Vista).</p></header>
+      <div class="sg-demo"><span class="sg-label">Sobre papel</span>
+        <div class="cluster">
+          <a class="btn btn--primary" href="#">Principal</a>
+          <a class="btn btn--primary" href="#">Con flecha<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          <a class="btn btn--outline" href="#">Contorno</a>
+          <a class="btn btn--soft" href="#">Suave</a>
+          <a class="btn btn--primary btn--sm" href="#">Pequeño</a>
+          <a class="btn btn--primary btn--lg" href="#">Grande</a>
+          <button class="btn btn--soft btn--icon" type="button" aria-label="Llamar"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></button>
+          <a class="link-arrow" href="#">Enlace con flecha</a>
+        </div>
+      </div>
+      <div class="sg-demo sg-demo--dark"><span class="sg-label">Sobre foto u oscuro</span>
+        <div class="cluster">
+          <a class="btn btn--light" href="#">Contactar<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          <a class="btn btn--outline-light" href="#">Saber más</a>
+          <a class="link-arrow" href="#">Ver la promoción</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Etiquetas ===== -->
+  <section class="sg-section" id="etiquetas">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Etiquetas y precio</h2></header>
+      <div class="sg-demo sg-demo--mist">
+        <div class="cluster">
+          <span class="badge badge--dark">Venta</span><span class="badge">Reservado</span><span class="badge badge--outline">Obra nueva</span><span class="badge badge--mist">Piscina</span><span class="price__discount">−20 %</span>
+        </div>
+      </div>
+      <div class="sg-demo">
+        <div class="grid grid--3">
+          <div><span class="sg-label">Venta</span><div class="price"><span class="price__now">150.000 €</span></div></div>
+          <div><span class="sg-label">Rebajado</span><div class="price"><span class="price__now">120.000 €</span><s class="price__old">150.000 €</s><span class="price__discount">−20 %</span></div></div>
+          <div><span class="sg-label">Alquiler con traspaso</span><div class="price"><span class="price__now">750 €<span class="price__period"> /mes</span></span><span class="price__extra">Traspaso 38.800 €</span></div></div>
+          <div><span class="sg-label">Por días</span><div class="price"><span class="price__now">85 €<span class="price__period"> /día</span></span></div></div>
+          <div><span class="sg-label">Consultar</span><div class="price price--consult"><span class="price__now">Consultar precio</span></div></div>
+          <div><span class="sg-label">Grande · .price--lg</span><div class="price price--lg"><span class="price__now">2.200.000 €</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Huecos ===== -->
+  <section class="sg-section" id="huecos">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Huecos de foto</h2><p class="muted"><code>&lt;div class="media ratio-4x3" data-label="Foto · fachada"&gt;&lt;/div&gt;</code>. Proporciones: 16×9, 3×2, 4×3, 1×1, 4×5, 21×9. Variantes: <code>--dark</code> (bajo texto blanco) y <code>--map</code>.</p></header>
+      <div class="grid grid--4">
+        <div><span class="sg-label">16 × 9</span><div class="media ratio-16x9" data-label="Foto · 16 × 9"></div></div>
+        <div><span class="sg-label">4 × 3 (fichas)</span><div class="media ratio-4x3" data-label="Foto · 4 × 3"></div></div>
+        <div><span class="sg-label">4 × 5 (retrato)</span><div class="media ratio-4x5" data-label="Foto · 4 × 5"></div></div>
+        <div><span class="sg-label">1 × 1</span><div class="media ratio-1x1" data-label="Foto · 1 × 1"></div></div>
+        <div><span class="sg-label">Oscuro</span><div class="media media--dark ratio-4x3" data-label="Foto bajo texto"></div></div>
+        <div><span class="sg-label">Mapa</span><div class="media media--map ratio-4x3" data-label="Mapa"></div></div>
+        <div><span class="sg-label">Mapa oscuro</span><div class="media media--map media--dark ratio-4x3" data-label="Mapa"></div></div>
+        <div><span class="sg-label">Pendiente de texto</span><div class="slot-note" style="min-height:0;height:calc(100% - 26px)">Hueco de contenido</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Formularios ===== -->
+  <section class="sg-section" id="campos">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Formularios</h2><p class="muted">Campos sobre gris niebla, en blanco al enfocarlos. Todo formulario lleva casilla de privacidad, la información básica de protección de datos y la nota de reCAPTCHA.</p></header>
+      <div class="grid grid--2" style="--grid-gap:48px">
+        <form class="form" data-form="demo" novalidate>
+          <div class="form__row form__row--2">
+            <div class="field"><label class="field__label" for="g-1">Nombre <span class="req">*</span></label><input class="input" id="g-1" required placeholder="Marta"></div>
+            <div class="field"><label class="field__label" for="g-2">Tipo</label><select class="select" id="g-2" data-fill="types"><option value="">Todos los tipos</option></select></div>
+          </div>
+          <div class="field"><label class="field__label" for="g-3">Email (con error)</label><input class="input" id="g-3" aria-invalid="true" value="marta@"><span class="field__error">Escribe un email válido.</span></div>
+          <div class="field"><label class="field__label" for="g-4">Precio</label><div class="input-group"><input class="input" id="g-4" type="number" value="150000"><span class="input-group__suffix">€</span></div><span class="field__hint">Ayuda bajo el campo.</span></div>
+          <div class="field"><label class="field__label" for="g-5">Mensaje</label><textarea class="textarea" id="g-5" placeholder="Cuéntanos qué buscas."></textarea></div>
+          <!-- @include consent-contacto -->
+          <div class="form__actions"><button class="btn btn--primary" type="submit">Enviar</button><p class="form__status" role="status" aria-live="polite"></p></div>
+        </form>
+        <div class="stack" style="--stack:32px">
+          <div><span class="sg-label">Selector segmentado · .segmented</span>
+            <div class="segmented"><label><input type="radio" name="g-seg" checked><span>Comprar</span></label><label><input type="radio" name="g-seg"><span>Alquilar</span></label><label><input type="radio" name="g-seg"><span>Traspaso</span></label></div></div>
+          <div><span class="sg-label">Píldoras · .chips</span>
+            <div class="chips"><label class="chip"><input type="checkbox" checked><span>Piscina</span></label><label class="chip"><input type="checkbox"><span>Parking</span></label><label class="chip"><input type="checkbox" checked><span>Terraza</span></label><label class="chip"><input type="checkbox"><span>Vistas al mar</span></label></div></div>
+          <div><span class="sg-label">Casillas · .check</span>
+            <div class="stack" style="--stack:10px"><label class="check"><input type="checkbox" checked><span>Casilla marcada</span></label><label class="check"><input type="checkbox"><span>Casilla sin marcar</span></label><label class="check"><input type="radio" name="g-r" checked><span>Opción</span></label></div></div>
+          <div><span class="sg-label">Interruptor · .switch</span>
+            <div class="stack" style="--stack:10px"><label class="switch-row"><span>Cookies de análisis<small>Estadísticas de uso</small></span><input class="switch" type="checkbox" checked></label><label class="switch-row"><span>Publicidad</span><input class="switch" type="checkbox"></label></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Cabecera ===== -->
+  <section class="sg-section" id="cabecera">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Cabecera</h2><p class="muted">La de arriba de esta página es la cabecera normal (fija al hacer scroll). En la portada va transparente sobre la foto: <code>.site-header--overlay</code>. Bajo 1100 px, el menú pasa a un botón que abre el menú a pantalla completa.</p></header>
+      <div class="sg-frame" style="min-height:340px;background:var(--color-ink)">
+        <div class="media media--dark media--square-corners" style="position:absolute;inset:0" data-label="Foto de portada"></div>
+        <div class="site-header site-header--overlay" style="position:absolute">
+          <div class="site-header__top"><div class="container"><ul class="lang-switch"><li><a href="#"><span>CA</span></a></li><li><a href="#" aria-current="true"><span>ES</span></a></li><li><a href="#"><span>EN</span></a></li></ul><ul class="site-header__top-links"><li><a href="#">Publica tu inmueble</a></li><li><a href="#">Mis favoritos</a></li></ul></div></div>
+          <div class="site-header__bar"><div class="container">
+            <a class="logo site-header__logo" href="#"><span class="logo__name">habitat.cat</span><span class="logo__tag">consultors immobiliaris</span></a>
+            <nav class="site-header__nav" aria-label="Ejemplo"><ul><li><a href="#" aria-current="page">Inicio</a></li><li><a href="#">Venta</a></li><li><a href="#">Alquiler</a></li><li><a href="#">Obra nueva</a></li><li><a href="#">Empresa</a></li><li><a href="#">Alertas</a></li><li><a href="#">Contacto</a></li></ul></nav>
+            <a class="site-header__phone" href="#"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>938 147 330</a>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Buscador ===== -->
+  <section class="sg-section" id="buscador">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Buscador</h2><p class="muted">Componente compartido: portada (sobre la foto) y franja gris en las páginas interiores. Tipos agrupados como en Inmovilla, zona con autocompletado, búsqueda avanzada desplegable. Envía a Venta o Alquiler según la operación.</p></header>
+      <div class="sg-demo sg-demo--mist">
+        <!-- @include search -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Portada ===== -->
+  <section class="sg-section" id="portada">
+    <div class="container stack" style="--stack:24px">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Portada</h2><p class="muted">Dos formatos: a sangre con cifras abajo (Vista) y en tarjeta redondeada (Real Estate).</p></header>
+      <div class="sg-frame">
+        <section class="hero" style="min-height:560px" aria-label="Ejemplo de portada">
+          <div class="hero__media media media--dark" data-label="Foto de portada · 2400 × 1400"></div>
+          <div class="container hero__inner" style="padding-top:96px">
+            <div class="hero__copy">
+              <span class="eyebrow">Vilanova i la Geltrú · Garraf · Penedès</span>
+              <p class="display-hero">Encontramos la casa<br>de tus sueños.</p>
+              <p class="hero__lead">Pisos, casas y locales en Vilanova i la Geltrú y toda la provincia de Barcelona.</p>
+              <div class="hero__actions"><a class="btn btn--light" href="#">Ver inmuebles<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></a><a class="btn btn--outline-light" href="#">Valorar mi casa</a></div>
+            </div>
+            <div class="hero__foot">
+              <p class="hero__note">Un equipo joven y dinámico, con un objetivo común.</p>
+              <ul class="stat-row"><li class="stat"><span class="stat__value">463</span><span class="stat__label">inmuebles</span></li><li class="stat"><span class="stat__value">405</span><span class="stat__label">en venta</span></li><li class="stat"><span class="stat__value">58</span><span class="stat__label">en alquiler</span></li></ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="hero-card">
+        <div class="media media--dark" data-label="Foto · casa con piscina"></div>
+        <div class="hero-card__copy">
+          <p class="h1" style="font-family:var(--font-display);font-weight:500;letter-spacing:-.03em">Casas a estrenar en el Garraf</p>
+          <p style="opacity:.85">Promovemos y construimos viviendas cálidas, sólidas y a buen precio.</p>
+          <div class="cluster"><a class="btn btn--primary" href="#">Pedir información</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Cifras ===== -->
+  <section class="sg-section" id="cifras">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Cifras</h2><p class="muted">En fila sobre foto (<code>.stat-row</code>) o en fichas gris (<code>.stat-tile</code>), junto a una foto grande (<code>.why</code>). Solo cifras con fuente.</p></header>
+      <div class="why">
+        <div class="media why__media" data-label="Foto · casa moderna"><span class="badge">¿Por qué elegirnos?</span></div>
+        <div class="why__tiles">
+          <div class="stat-tile"><p class="stat-tile__value">463<br>inmuebles</p><p class="stat-tile__text">en cartera, de Vilanova a toda la provincia.</p></div>
+          <div class="stat-tile"><p class="stat-tile__value">100 %<br>financiación</p><p class="stat-tile__text">del crédito y la hipoteca.</p></div>
+          <div class="stat-tile"><p class="stat-tile__value">405<br>en venta</p><p class="stat-tile__text">viviendas, locales y terrenos.</p></div>
+          <div class="stat-tile"><p class="stat-tile__value">58<br>en alquiler</p><p class="stat-tile__text">de larga temporada, por días y con traspaso.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Bloques ===== -->
+  <section class="sg-section" id="bloques">
+    <div class="container stack" style="--stack:48px">
+      <header style="margin:0"><span class="eyebrow">Componentes</span><h2 class="h2">Bloques de página</h2><p class="muted">Cabecera de sección, bloque dividido (NORD) y tarjetas de llamada a la acción.</p></header>
+      <div>
+        <span class="sg-label">.section-head--split</span>
+        <header class="section-head section-head--split" style="margin:0">
+          <div class="section-head__titles"><span class="eyebrow">Inmuebles</span><p class="h2" style="font-family:var(--font-display);font-weight:500;letter-spacing:-.025em">Nuestra cartera.</p></div>
+          <p class="section-head__aside">De la búsqueda del terreno a la entrega de llaves, con garantía de calidad.</p>
+        </header>
+      </div>
+      <div>
+        <span class="sg-label">.split (texto centrado + foto, como NORD)</span>
+        <div class="split">
+          <div class="split__copy split__copy--center" style="justify-self:center">
+            <span class="eyebrow">Garraf · Penedès</span>
+            <p class="h2" style="font-family:var(--font-display);font-weight:500;letter-spacing:-.025em">Despierta frente<br>al Mediterráneo.</p>
+            <a class="btn btn--primary btn--sm" href="#">Ver inmuebles con vistas</a>
+          </div>
+          <div class="media ratio-4x5" data-label="Foto · interior con vistas"></div>
+        </div>
+      </div>
+      <div>
+        <span class="sg-label">.cta-pair</span>
+        <div class="cta-pair">
+          <a class="cta-card" href="#"><span class="cta-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg></span><div class="cta-card__foot"><div><p class="cta-card__title">Alertas</p><p class="cta-card__text">Te enviamos cada inmueble nuevo que encaje.</p></div><svg class="icon" aria-hidden="true" style="width:28px;height:28px"><use href="#i-arrow-up-right"/></svg></div></a>
+          <a class="cta-card cta-card--dark" href="#"><span class="cta-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-upload-home"/></svg></span><div class="cta-card__foot"><div><p class="cta-card__title">Publica tu inmueble</p><p class="cta-card__text">Lo valoramos y lo movemos entre nuestros clientes.</p></div><svg class="icon" aria-hidden="true" style="width:28px;height:28px"><use href="#i-arrow-up-right"/></svg></div></a>
+        </div>
+      </div>
+      <div>
+        <span class="sg-label">Tarjeta de promoción (obra nueva)</span>
+        <article class="hero-card" style="min-height:380px">
+          <div class="media media--dark" data-label="Foto · fachada de la promoción"></div>
+          <div class="hero-card__copy">
+            <div class="cluster"><span class="badge">En construcción</span><span class="badge badge--dark">Entrega [trimestre y año]</span></div>
+            <p class="h2" style="font-family:var(--font-display);font-weight:500">[Nombre de la promoción]</p>
+            <p class="small" style="opacity:.8">[Municipio] · [n.º] viviendas · desde [precio] €</p>
+            <div class="cluster"><a class="btn btn--light" href="#">Ver la promoción<svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Ficha de inmueble ===== -->
+  <section class="sg-section" id="ficha">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Ficha de inmueble</h2><p class="muted">Una sola plantilla (<code>#tpl-property-card</code>) que <code>habitat.js</code> rellena con cada inmueble. Fotos con flechas, operación, precio (rebaja, traspaso, por días o «consultar»), Reservado, título «Tipo – Municipio (Zona)», referencia, habitaciones, baños, m², «+ Info», favorito y descartar.</p></header>
+      <div class="property-grid" data-card-samples='[
+        {"id":"demo-1","ref":"03-60395","operations":{"sale":{"amount":150000,"period":"once"}},"status":"available","type":"Flat","typeGroup":"apartment","municipality":"Vilanova i la Geltrú","zone":"Centre","bedrooms":3,"bathrooms":2,"surface":92,"photos":[]},
+        {"id":"demo-2","ref":"03-60291","operations":{"sale":{"amount":120000,"previous":150000,"period":"once"}},"discountPct":20,"status":"reserved","type":"Penthouse","typeGroup":"apartment","municipality":"Sitges","zone":"Terramar","bedrooms":2,"bathrooms":1,"surface":74,"photos":[]},
+        {"id":"demo-3","ref":"GV.TPN.01","operations":{"rent":{"amount":750,"period":"month"},"transfer":{"amount":38800,"period":"once"}},"status":"available","type":"Business Premise","typeGroup":"commercial","municipality":"Vilanova i la Geltrú","zone":"Centre","surface":85,"photos":[]},
+        {"id":"demo-4","ref":"63.Cuban","operations":{"shortTerm":{"amount":85,"period":"day"}},"status":"available","type":"Apartment","typeGroup":"apartment","municipality":"Sitges","zone":"Centre","bedrooms":1,"bathrooms":1,"surface":35,"photos":[]},
+        {"id":"demo-5","ref":"H-1234","operations":{"sale":{"amount":null}},"consultPrice":true,"status":"available","type":"Plot of land","typeGroup":"land","municipality":"Olivella","zone":"Mas Mestre","surface":1200,"photos":[]},
+        {"id":"demo-6","ref":"ON-01","operations":{"sale":{"amount":259000,"period":"once"}},"status":"available","isNewBuild":true,"type":"Duplex","typeGroup":"apartment","municipality":"Sant Pere de Ribes","zone":"Les Roquetes","bedrooms":3,"bathrooms":2,"surface":110,"photos":[]}
+      ]'></div>
+    </div>
+  </section>
+
+  <!-- ===== Listado ===== -->
+  <section class="sg-section" id="listado">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Listado</h2><p class="muted">Recuento, atajos a Vistos / Descartados / Favoritos, orden, mapa, fichas, inmuebles por página (12 / 24 / 36 / 48) y paginación. Lee de <code>HabitatData</code>: aquí con la muestra de 463 inmuebles.</p></header>
+      <div data-listing data-size="3" data-sort="precio-venta-desc">
+        <!-- @include listing -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Detalle ===== -->
+  <section class="sg-section" id="detalle">
+    <div class="container stack" style="--stack:48px">
+      <header style="margin:0"><span class="eyebrow">Componentes</span><h2 class="h2">Piezas de la página de inmueble</h2><p class="muted">Galería, datos clave, características (solo las que existen), certificado energético, simulador de hipoteca y panel de contacto. Completas en <a href="paginas/inmueble.html">paginas/inmueble.html</a>.</p></header>
+      <div>
+        <span class="sg-label">Galería · .gallery</span>
+        <div class="gallery"><div class="media gallery__main" data-label="Foto 1 de 12"></div><div class="gallery__thumbs"><div class="media" data-label="Foto 2"></div><div class="media" data-label="Foto 3"></div><div class="media" data-label="Foto 4"></div><div class="gallery__more"><div class="media" data-label="Foto 5" style="height:100%"></div><button class="btn btn--light btn--sm" type="button"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg>Ver las 12 fotos</button></div></div></div>
+      </div>
+      <div class="grid grid--2" style="--grid-gap:48px">
+        <div class="stack" style="--stack:24px">
+          <span class="sg-label">Datos clave · .key-facts</span>
+          <ul class="key-facts"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"/></svg><strong>3</strong><span>Habitaciones</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"/></svg><strong>2</strong><span>Baños</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-area"/></svg><strong>92 m²</strong><span>Superficie</span></li></ul>
+          <span class="sg-label">Características · .features</span>
+          <dl class="features" style="grid-template-columns:1fr"><div><dt>Referencia</dt><dd>03-60395</dd></div><div><dt>Año de construcción</dt><dd>1980</dd></div><div><dt>Gastos de comunidad</dt><dd>100 €/año</dd></div><div><dt>IBI</dt><dd>35,24 €/año</dd></div><div><dt>Régimen</dt><dd>Libre</dd></div></dl>
+          <ul class="extras-list"><li class="badge badge--mist"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ascensor</li><li class="badge badge--mist"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Terraza</li></ul>
+        </div>
+        <div class="stack" style="--stack:24px">
+          <span class="sg-label">Certificado energético · ejemplo con calificación D</span>
+          <div class="energy" data-energy-sample='{"rating":"D","consumption":148,"emissions":31}'>
+            <ul class="energy__scale" data-energy-scale></ul>
+            <div class="energy__values">
+              <div class="energy__value"><span>Calificación</span><strong data-energy-rating>—</strong></div>
+              <div class="energy__value"><span>Consumo de energía</span><strong data-energy-consumption>—</strong></div>
+              <div class="energy__value"><span>Emisiones</span><strong data-energy-emissions>—</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="sg-label">Simulador de hipoteca · .mortgage</span>
+        <form class="mortgage" data-mortgage>
+          <div class="form">
+            <div class="form__row form__row--2">
+              <div class="field"><label class="field__label" for="gm-p">Precio</label><div class="input-group"><input class="input" id="gm-p" name="price" type="number" value="150000"><span class="input-group__suffix">€</span></div></div>
+              <div class="field"><label class="field__label" for="gm-s">Ahorro aportado</label><div class="input-group"><input class="input" id="gm-s" name="saved" type="number" value="45000"><span class="input-group__suffix">€</span></div></div>
+            </div>
+            <div class="form__row form__row--2">
+              <div class="field"><label class="field__label" for="gm-y">Plazo</label><div class="input-group"><input class="input" id="gm-y" name="years" type="number" value="30"><span class="input-group__suffix">años</span></div></div>
+              <div class="field"><label class="field__label" for="gm-r">Tipo de interés</label><div class="input-group"><input class="input" id="gm-r" name="rate" type="number" step="0.05" value="3"><span class="input-group__suffix">%</span></div></div>
+            </div>
+          </div>
+          <div class="mortgage__result on-dark">
+            <dl><div><dt>Impuestos de compra (10 %)</dt><dd data-out="taxes">—</dd></div><div><dt>Precio + impuestos</dt><dd data-out="total">—</dd></div><div><dt>Importe de la hipoteca</dt><dd data-out="loan">—</dd></div></dl>
+            <div class="mortgage__monthly"><span>Cuota mensual</span><strong data-out="monthly">—</strong></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Empresa ===== -->
+  <section class="sg-section" id="empresa">
+    <div class="container stack" style="--stack:32px">
+      <header style="margin:0"><span class="eyebrow">Componentes</span><h2 class="h2">Empresa, pestañas y estados</h2></header>
+      <div class="statement-grid"><div class="statement"><p class="statement__text">Un equipo profesional joven y dinámico con un objetivo común: satisfacer las demandas de nuestros clientes.</p></div><div class="statement"><p class="statement__text">Promoción, compra, venta y construcción de inmuebles urbanos y rústicos.</p></div></div>
+      <div><span class="sg-label">Pestañas · .tabs</span><nav class="tabs" aria-label="Ejemplo"><a href="#" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Favoritos <span class="shortcuts__n">3</span></a><a href="#"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>Vistos <span class="shortcuts__n">12</span></a><a href="#"><svg class="icon" aria-hidden="true"><use href="#i-eye-off"/></svg>Descartados <span class="shortcuts__n">1</span></a></nav></div>
+      <div class="grid grid--2">
+        <div><span class="sg-label">Lista vacía · .empty-state</span><div class="empty-state" style="padding:48px 24px"><svg class="icon" aria-hidden="true" style="width:40px;height:40px"><use href="#i-heart"/></svg><p class="h4">Aún no hay inmuebles en esta lista.</p><a class="btn btn--primary btn--sm" href="#">Ver inmuebles</a></div></div>
+        <div><span class="sg-label">Migas · .breadcrumb</span><ol class="breadcrumb"><li><a href="#">Inicio</a></li><li><a href="#">Venta</a></li><li aria-current="page">Ref. 03-60395</li></ol></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Boletín ===== -->
+  <section class="sg-section" id="boletin">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Boletín</h2></header>
+      <div class="newsletter on-dark">
+        <div class="stack"><span class="eyebrow">Novedades</span><p class="h2" style="font-family:var(--font-display);font-weight:500">Sé el primero en ver los inmuebles nuevos.</p></div>
+        <form class="newsletter__form" data-form="boletin-demo" novalidate>
+          <div class="newsletter__row"><label class="visually-hidden" for="gn">Email</label><input class="input" id="gn" type="email" required placeholder="tu@email.com"><button class="btn btn--light" type="submit">Suscribirme</button></div>
+          <label class="check"><input type="checkbox" required><span>Acepto la <a href="#">política de privacidad</a>.</span></label>
+          <label class="check"><input type="checkbox"><span>Acepto recibir publicidad de HABITAT.CAT.</span></label>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Flotantes ===== -->
+  <section class="sg-section" id="flotantes">
+    <div class="container">
+      <header><span class="eyebrow">Componentes</span><h2 class="h2">Elementos flotantes</h2><p class="muted">Abajo a la derecha de cada página: «Te llamamos» y WhatsApp (pruébalos aquí abajo, son los de verdad). El aviso de cookies sale abajo a la izquierda la primera vez.</p></header>
+      <div class="grid grid--3">
+        <div class="sg-demo sg-demo--mist"><span class="sg-label">Te llamamos</span>
+          <div class="popover"><div class="popover__head"><div><span class="eyebrow">¿Alguna pregunta?</span><p class="h4" style="font-family:var(--font-display)">Te llamamos nosotros</p></div><span class="popover__close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></span></div><div class="form"><div class="field"><span class="field__label">Nombre</span><span class="input"></span></div><div class="field"><span class="field__label">Teléfono</span><span class="input"></span></div><span class="btn btn--primary btn--block">Llamadme</span></div></div>
+        </div>
+        <div class="sg-demo sg-demo--mist"><span class="sg-label">WhatsApp</span>
+          <div class="popover"><div class="popover__head"><span class="eyebrow">WhatsApp · 678 653 335</span><span class="popover__close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></span></div><p class="whatsapp-bubble__msg"><strong>¡Hola!</strong>Escríbenos por WhatsApp y te respondemos enseguida.</p><span class="btn btn--primary btn--block"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>Abrir WhatsApp</span></div>
+          <div class="cluster" style="margin-top:16px"><span class="fab fab--light"><svg class="icon" aria-hidden="true"><use href="#i-callback"/></svg><span class="fab__label">Te llamamos</span></span><span class="fab"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span class="fab__label">WhatsApp</span></span></div>
+        </div>
+        <div class="sg-demo sg-demo--mist"><span class="sg-label">Aviso de cookies</span>
+          <div class="cookie-banner" style="position:static"><div><p class="cookie-banner__title">Usamos cookies</p><p class="cookie-banner__text">Las técnicas hacen que la web funcione. Con tu permiso, usamos también cookies de análisis.</p></div><div class="cookie-banner__actions"><span class="btn btn--primary btn--sm">Aceptar todas</span><span class="btn btn--outline btn--sm">Rechazar</span><span class="btn btn--soft btn--sm">Configurar</span></div></div>
+          <button class="btn btn--outline btn--sm" type="button" data-action="open-cookies" style="margin-top:16px">Abrir el aviso real</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Páginas ===== -->
+  <section class="sg-section" id="paginas">
+    <div class="container">
+      <header><span class="eyebrow">Plantillas</span><h2 class="h2">Páginas</h2><p class="muted">Cada una con su título y su descripción propios. Ruta prevista en producción a la derecha (con carpeta de idioma: /ca, /es, /en).</p></header>
+      <dl class="features" style="grid-template-columns:1fr">
+        <div><dt><a href="paginas/index.html">Inicio</a></dt><dd><code>/</code></dd></div>
+        <div><dt><a href="paginas/venta.html">Venta</a></dt><dd><code>/for-sale</code></dd></div>
+        <div><dt><a href="paginas/alquiler.html">Alquiler</a></dt><dd><code>/for-rent</code></dd></div>
+        <div><dt><a href="paginas/promociones.html">Obra nueva</a></dt><dd><code>/promotions</code></dd></div>
+        <div><dt><a href="paginas/inmueble.html">Inmueble</a></dt><dd><code>/property/{tipo}/{municipio}/{zona}/{id}</code></dd></div>
+        <div><dt><a href="paginas/empresa.html">Empresa</a></dt><dd><code>/company</code></dd></div>
+        <div><dt><a href="paginas/alertas.html">Alertas</a></dt><dd><code>/alerts</code></dd></div>
+        <div><dt><a href="paginas/publica-tu-inmueble.html">Publica tu inmueble</a></dt><dd><code>/list-your-property</code></dd></div>
+        <div><dt><a href="paginas/mis-inmuebles.html">Mis inmuebles</a></dt><dd><code>/my-properties</code></dd></div>
+        <div><dt><a href="paginas/privacidad.html">Política de privacidad</a> · <a href="paginas/aviso-legal.html">Aviso legal</a> · <a href="paginas/cookies.html">Cookies</a></dt><dd><code>/privacy-policy · /legal-notice · /cookies-policy</code></dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<!-- @include footer -->
+<!-- @include floating -->
+<script>
+  (function () {
+    var box = document.getElementById("sg-icons");
+    document.querySelectorAll("svg symbol[id^='i-']").forEach(function (s) {
+      var d = document.createElement("div");
+      d.className = "badge badge--mist";
+      d.style.cssText = "padding:10px 14px;gap:8px;font-weight:500";
+      d.innerHTML = '<svg class="icon" aria-hidden="true" style="width:20px;height:20px"><use href="#' + s.id + '"/></svg>' + s.id;
+      box.appendChild(d);
+    });
+  })();
+</script>
+<!-- @include scripts -->
