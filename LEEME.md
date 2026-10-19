@@ -26,7 +26,7 @@ Resultado: **monocromo** (tinta #0F0F0E, papel #FFFFFF, niebla #F2F2F0), **Urban
 | Ruta | Qué es |
 |---|---|
 | `guia.html` | Guía de estilo con todos los componentes |
-| `paginas/` | Las 12 páginas montadas: inicio, venta, alquiler, obra nueva, inmueble, empresa, alertas, publica tu inmueble, mis inmuebles, privacidad, aviso legal, cookies |
+| `paginas/` | Las 11 páginas montadas: inicio, venta, alquiler, obra nueva, inmueble, empresa, alertas, mis inmuebles, privacidad, aviso legal, cookies |
 | `css/tokens.css` | **Todas las decisiones de diseño** (color, tipos, espacios, radios). Cambia aquí y cambia todo |
 | `css/base.css` · `css/components.css` | Reset y maquetación · componentes. Se enlaza solo `css/habitat.css` |
 | `js/data-source.js` | Fuente de datos: hoy la muestra local, mañana Inmovilla (adaptador preparado) |
