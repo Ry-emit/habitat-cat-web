@@ -41,8 +41,8 @@
 
 :root {
   /* ---- Color: monocromo ---- */
-  --color-ink: #0f0f0e;          /* texto, botón principal, pie */
-  --color-ink-soft: #2a2a28;     /* hover del botón principal */
+  --color-ink: #2b2a29;          /* gris carbón del logo: texto, pie, menú */
+  --color-ink-soft: #3d3c3a;     /* hover del botón principal */
   --color-paper: #ffffff;        /* fondo de página */
   --color-mist: #f2f2f0;         /* fichas de cifras, campos, bloques */
   --color-mist-strong: #e8e8e5;  /* hover de fichas, huecos de foto */
@@ -51,11 +51,11 @@
   --color-faint: #9a9a96;        /* placeholders, ayudas */
   --color-on-dark: #ffffff;      /* texto sobre foto o fondo oscuro */
   --color-on-dark-muted: rgba(255, 255, 255, .72);
-  --color-scrim: linear-gradient(180deg, rgba(15,15,14,.55) 0%, rgba(15,15,14,.15) 40%, rgba(15,15,14,.65) 100%);
+  --color-scrim: linear-gradient(180deg, rgba(43,42,41,.55) 0%, rgba(43,42,41,.15) 40%, rgba(43,42,41,.65) 100%);
 
-  /* Acento: por defecto, tinta. Para recuperar el rojo del tejado del logo
-     actual, cambia solo esta línea (p. ej. #c8102e). */
-  --color-accent: var(--color-ink);
+  /* Rojo corporativo (el de «.cat» en el logo) */
+  --color-accent: #e3192c;
+  --color-accent-dark: #c11424;
   --color-on-accent: #ffffff;
 
   /* Estados (funcionales, no decorativos) */

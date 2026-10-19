@@ -37,7 +37,8 @@
 .btn .icon { width: 1.05em; height: 1.05em; transition: transform var(--speed) var(--ease); }
 .btn:hover .icon--arrow { transform: translateX(3px); }
 
-.btn--primary:hover { --btn-bg: var(--color-ink-soft); }
+.btn--primary { --btn-bg: var(--color-accent); --btn-fg: var(--color-on-accent); }
+.btn--primary:hover { --btn-bg: var(--color-accent-dark); }
 .btn--accent { --btn-bg: var(--color-accent); --btn-fg: var(--color-on-accent); }
 .btn--light { --btn-bg: var(--color-paper); --btn-fg: var(--color-ink); }
 .btn--light:hover { --btn-bg: var(--color-mist); }
@@ -160,7 +161,11 @@
   letter-spacing: .14em; text-transform: uppercase;
   opacity: .7;
 }
-.logo img { height: 40px; width: auto; }
+.logo img { height: 44px; width: auto; display: block; }
+.site-header__logo .logo__on-dark { display: none; }
+.site-header--overlay .site-header__logo .logo__on-light { display: none; }
+.site-header--overlay .site-header__logo .logo__on-dark { display: block; }
+.site-footer .logo img { height: 48px; }
 
 /* ---------- Selector de idioma ---------- */
 .lang-switch { display: flex; gap: 2px; list-style: none; }
